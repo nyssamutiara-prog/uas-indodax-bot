@@ -1,0 +1,17 @@
+{
+  "btcidr": {
+    "first_bar": "2023-08-23T08:00:00.000Z",
+    "bars": 28051,
+    "median_daily_volume_idr_first90d": 9782564598.140669
+  },
+  "ethidr": {
+    "first_bar": "2023-08-23T08:00:00.000Z",
+    "bars": 28051,
+    "median_daily_volume_idr_first90d": 3697424978.8031397
+  },
+  "bnbidr": {
+    "first_bar": "2023-08-23T08:00:00.000Z",
+    "bars": 28051,
+    "median_daily_volume_idr_first90d": 696427162.6769474
+  }
+}

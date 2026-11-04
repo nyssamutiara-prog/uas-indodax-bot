@@ -1,0 +1,13 @@
+{
+  "name": "uas-indodax-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "UAS Algoritma Trading - bot dry run EMA crossover di Indodax (Vercel)",
+  "scripts": {
+    "check-fees": "node scripts/check_fees.js",
+    "fetch-history": "node scripts/fetch_history.js",
+    "backtest": "node scripts/backtest.js",
+    "test": "node scripts/selftest.js"
+  }
+}
