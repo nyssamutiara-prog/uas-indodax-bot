@@ -1,29 +1,161 @@
-<h1>Dashboard Bot Dry Run EMA Crossover</h1>
-<div id="ringkas">Memuat...</div>
-<table border="1" cellpadding="4" id="tbl"></table>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Bot Dry Run EMA Crossover</title>
+<style>
+:root{--bg:#eef2f6;--panel:#fff;--ink:#14213d;--mute:#5b6b82;--line:#d6dde7;--ok:#0f766e;--warn:#b45309;--bad:#b42318;--okbg:#dcf3ef;--badbg:#fde8e6;--warnbg:#fdf0dc}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1724;--panel:#17233a;--ink:#e6ecf5;--mute:#93a3bb;--line:#2a3a57;--ok:#5fd3c4;--warn:#f0b35a;--bad:#ff8b80;--okbg:#12363a;--badbg:#44211f;--warnbg:#3d2f14}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif;padding:24px 16px 48px}
+main{max-width:1000px;margin:0 auto}
+h1{font-size:26px;margin:0 0 2px;letter-spacing:-.01em}
+h2{font-size:17px;margin:32px 0 10px}
+.sub{color:var(--mute);margin:0 0 18px}
+.banner{border-radius:10px;padding:16px 18px;border-left:6px solid var(--ok);background:var(--okbg)}
+.banner.bad{border-color:var(--bad);background:var(--badbg)}
+.banner.warn{border-color:var(--warn);background:var(--warnbg)}
+.banner b{font-size:18px;display:block}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kpi .l{color:var(--mute);font-size:13px}
+.kpi .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}
+.kpi .n{color:var(--mute);font-size:12px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:14px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mute);font-weight:600}
+td.msg{white-space:normal}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px}
+.tag.ok{background:var(--okbg);color:var(--ok)}.tag.bad{background:var(--badbg);color:var(--bad)}
+.note{color:var(--mute);font-size:13px;margin-top:8px}
+svg{width:100%;height:auto;display:block}
+</style>
+</head>
+<body>
+<main>
+<h1>Bot dry run EMA crossover</h1>
+<p class="sub">Forward test Indodax, mulai 4 Nov 2026 12.00 WIB. Semua angka dihitung dari log di /api/data.</p>
+<div id="status" class="banner warn"><b>Memuat data…</b></div>
+<div class="kpis" id="kpis"></div>
+
+<h2>Equity</h2>
+<div class="box"><div id="chart"></div><div class="note" id="eqnote"></div></div>
+
+<h2>Candle diproses per pasangan</h2>
+<div class="box"><table id="pairs"></table></div>
+
+<h2>Error API</h2>
+<div class="box"><table id="errs"></table></div>
+
+<h2>Riwayat panggilan bot</h2>
+<div class="box"><table id="calls"></table></div>
+
+<h2>Metrik backtest dan trade</h2>
+<div class="box" id="orders"></div>
+</main>
+
 <script>
-fetch('/api/data')
-  .then(async r => {
-    const t = await r.text();
-    if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + t.slice(0, 200));
-    return JSON.parse(t);
-  })
-  .then(d => {
-    const calls = d.calls || [];
-    const diproses = calls.reduce((n, c) => n + (c.processed || []).length, 0);
-    const error = calls.reduce((n, c) => n + (c.errors || []).length, 0);
-    const akhir = calls[calls.length - 1] || {};
-    document.getElementById('ringkas').innerHTML =
-      'Total panggilan: ' + calls.length + '<br>' +
-      'Candle diproses: ' + diproses + '<br>' +
-      'Error: ' + error + '<br>' +
-      'Equity terakhir: Rp' + Number(akhir.equity || 0).toLocaleString('id-ID');
-    document.getElementById('tbl').innerHTML =
-      '<tr><th>Waktu (UTC)</th><th>Diproses</th><th>Error</th><th>Equity</th></tr>' +
-      calls.slice().reverse().map(c =>
-        '<tr><td>' + c.t + '</td><td>' + (c.processed || []).length + '</td><td>' +
-        (c.errors || []).map(e => e.msg).join('; ') + '</td><td>' + c.equity + '</td></tr>'
-      ).join('');
-  })
-  .catch(e => { document.getElementById('ringkas').textContent = 'ERROR: ' + e.message; });
+const START = Date.parse('2026-11-04T05:00:00Z'); // freeze 4 Nov 12.00 WIB
+const END = Date.parse('2026-11-14T05:00:00Z');   // akhir 10 hari
+const rp = n => 'Rp' + Math.round(n).toLocaleString('id-ID');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const wib = iso => new Date(iso).toLocaleString('id-ID', {timeZone:'Asia/Jakarta', day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit'}) + ' WIB';
+const $ = id => document.getElementById(id);
+
+function kpi(l, v, n){ return '<div class="kpi"><div class="l">'+l+'</div><div class="v">'+v+'</div><div class="n">'+(n||'')+'</div></div>'; }
+
+function chart(pts){
+  if(pts.length < 2){ return '<p class="note">Belum cukup data equity untuk digambar.</p>'; }
+  const W=700,H=180,P=28, vals=pts.map(p=>p.v);
+  let lo=Math.min(...vals), hi=Math.max(...vals);
+  if(lo===hi){ lo-=1; hi+=1; }
+  const x=i=>P+(W-2*P)*i/(pts.length-1), y=v=>H-P-(H-2*P)*(v-lo)/(hi-lo);
+  const d=pts.map((p,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(p.v).toFixed(1)).join(' ');
+  return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Grafik equity">'+
+    '<line x1="'+P+'" x2="'+(W-P)+'" y1="'+(H-P)+'" y2="'+(H-P)+'" stroke="var(--line)"/>'+
+    '<path d="'+d+'" fill="none" stroke="var(--ok)" stroke-width="2.5"/>'+
+    '<text x="'+P+'" y="14" font-size="11" fill="var(--mute)">'+rp(hi)+'</text>'+
+    '<text x="'+P+'" y="'+(H-8)+'" font-size="11" fill="var(--mute)">'+rp(lo)+'</text></svg>';
+}
+
+fetch('/api/data').then(async r=>{
+  const t = await r.text();
+  if(!r.ok) throw new Error('HTTP '+r.status+': '+t.slice(0,200));
+  return JSON.parse(t);
+}).then(d=>{
+  const calls = d.calls || [];
+  const okCalls = calls.filter(c=>!(c.errors||[]).length);
+  const failCalls = calls.filter(c=>(c.errors||[]).length);
+  let streak = 0;
+  for(let i=calls.length-1;i>=0;i--){ if((calls[i].errors||[]).length) streak++; else break; }
+  const lastOk = okCalls.length ? okCalls[okCalls.length-1] : null;
+
+  // status
+  const st = $('status');
+  if(!calls.length){ st.className='banner warn'; st.innerHTML='<b>Belum ada panggilan bot</b>Log kosong.'; }
+  else if(streak>0){
+    const lastErr = calls[calls.length-1].errors[0].msg;
+    st.className='banner bad';
+    st.innerHTML='<b>Bot gagal terhubung ke Indodax</b>'+streak+' panggilan terakhir error: '+esc(lastErr)+'.'+
+      (lastOk?' Panggilan sukses terakhir: '+wib(lastOk.t)+'.':'');
+  } else { st.className='banner'; st.innerHTML='<b>Bot berjalan normal</b>Panggilan terakhir: '+wib(calls[calls.length-1].t)+'.'; }
+
+  // candle diproses
+  const seen = new Set(), perPair = {};
+  calls.forEach(c=>(c.processed||[]).forEach(p=>{
+    const k=p.pair+'|'+p.candle;
+    if(!seen.has(k)){ seen.add(k); (perPair[p.pair]=perPair[p.pair]||{n:0,beli:0,jual:0,hold:0}).n++;
+      if(p.action==='BUY') perPair[p.pair].beli++; else if(p.action==='SELL') perPair[p.pair].jual++; else perPair[p.pair].hold++; }
+  }));
+  const pairs = Object.keys(perPair).sort();
+  const now = Math.min(Date.now(), END);
+  const expected = Math.max(0, Math.floor((now-START)/3600000));
+  const totalProc = seen.size;
+  const uptime = (expected && pairs.length) ? Math.min(100, totalProc/(expected*pairs.length)*100) : 0;
+
+  // equity
+  const eq = calls.filter(c=>typeof c.equity==='number').map(c=>({t:c.t,v:c.equity}));
+  const lastEq = eq.length ? eq[eq.length-1].v : null;
+  const ret = lastEq!==null ? (lastEq/100000000-1)*100 : null;
+
+  const errCount = calls.reduce((n,c)=>n+(c.errors||[]).length,0);
+  const killCount = calls.reduce((n,c)=>n+(c.notes||[]).filter(x=>/kill/i.test(String(x))).length,0);
+
+  $('kpis').innerHTML =
+    kpi('Equity terakhir', lastEq!==null?rp(lastEq):'-', lastEq!==null?'dari Rp100.000.000 modal awal':'') +
+    kpi('Return forward test', ret!==null?ret.toFixed(2)+'%':'-', 'dinilai di best bid') +
+    kpi('Panggilan sukses', okCalls.length+' dari '+calls.length, failCalls.length+' panggilan error') +
+    kpi('Candle diproses', totalProc, 'dari ±'+(expected*pairs.length)+' seharusnya') +
+    kpi('Uptime (estimasi)', uptime.toFixed(1)+'%', 'kasar: candle unik diproses ÷ candle berjalan') +
+    kpi('Error API', errCount, 'termasuk percobaan ulang') +
+    kpi('Kill switch dipakai', killCount+' kali', 'dari catatan log');
+
+  $('chart').innerHTML = chart(eq);
+  $('eqnote').textContent = eq.length ? 'Titik equity hanya dari panggilan yang berhasil ('+eq.length+' titik).' : '';
+
+  $('pairs').innerHTML = '<tr><th>Pasangan</th><th>Candle diproses</th><th>HOLD</th><th>BUY</th><th>SELL</th></tr>' +
+    (pairs.length ? pairs.map(p=>'<tr><td>'+esc(p.toUpperCase())+'</td><td>'+perPair[p].n+'</td><td>'+perPair[p].hold+'</td><td>'+perPair[p].beli+'</td><td>'+perPair[p].jual+'</td></tr>').join('') : '<tr><td colspan="5">Belum ada candle diproses.</td></tr>');
+
+  const byMsg = {}; calls.forEach(c=>(c.errors||[]).forEach(e=>{
+    const k=e.msg; (byMsg[k]=byMsg[k]||{n:0,first:c.t,last:c.t}).n++; byMsg[k].last=c.t; }));
+  const km = Object.keys(byMsg);
+  $('errs').innerHTML = '<tr><th>Pesan error</th><th>Jumlah</th><th>Pertama</th><th>Terakhir</th></tr>' +
+    (km.length ? km.map(k=>'<tr><td class="msg">'+esc(k)+'</td><td>'+byMsg[k].n+'</td><td>'+wib(byMsg[k].first)+'</td><td>'+wib(byMsg[k].last)+'</td></tr>').join('') : '<tr><td colspan="4">Tidak ada error.</td></tr>');
+
+  $('calls').innerHTML = '<tr><th>Waktu</th><th>Status</th><th>Candle diproses</th><th>Lama (ms)</th></tr>' +
+    calls.slice().reverse().slice(0,40).map(c=>{
+      const bad=(c.errors||[]).length;
+      return '<tr><td>'+wib(c.t)+'</td><td><span class="tag '+(bad?'bad':'ok')+'">'+(bad?'error':'ok')+'</span></td><td>'+(c.processed||[]).length+'</td><td>'+(c.durationMs??'-')+'</td></tr>'; }).join('');
+
+  const orders = d.orders || [];
+  $('orders').innerHTML = orders.length
+    ? '<p>'+orders.length+' order simulasi tercatat.</p>'
+    : '<p>Belum ada order simulasi di log. Return, CAGR, maximum drawdown, profit factor, win rate, porsi biaya, dan benchmark buy and hold BTC/IDR dihitung dari hasil backtest dan log lewat skrip hitung_ulang, lalu ditambahkan ke halaman ini.</p>';
+}).catch(e=>{
+  const st=$('status'); st.className='banner bad'; st.innerHTML='<b>Data tidak bisa dimuat</b>'+esc(e.message);
+});
 </script>
+</body>
+</html>
