@@ -30,9 +30,22 @@ Bukti angka sama: tombol **metrik_dashboard.json** di dashboard dan file `hasil_
 
 Konfigurasi bawaan ada di `DEFAULTS` dalam `metrics.js`: timeframe 1 jam, jendela forward 4 Nov 05.00 UTC sampai 14 Nov 05.00 UTC, modal Rp100 juta, benchmark `btcidr`. Konfigurasi ini bisa ditimpa lewat `backtest.json → meta.config`.
 
+## Membuat `public/backtest.json` dari `scripts/backtest.js`
+
+`scripts/buat_backtest_json.mjs` hanya membaca output `backtest.js` dan menyusun ulang formatnya. Strategi dan parameternya tidak diubah.
+
+```bash
+npm run fetch-history     # data/*.csv harus mencakup sampai 14 Nov 2026 05.00 UTC
+node scripts/backtest.js                                                         # -> backtest_results.json
+node scripts/backtest.js --from=2026-11-04T05:00:00Z --to=2026-11-14T05:00:00Z   # -> backtest_window.json
+node scripts/buat_backtest_json.mjs                                              # -> public/backtest.json
+```
+
+Rincian fee, spread, dan slippage per trade diturunkan dari rumus di `backtest.js`. Harga beli = open × (1 + BT_SPREAD/2 + BT_SLIPPAGE), harga jual = open × (1 − BT_SPREAD/2 − BT_SLIPPAGE), fee = qty × harga × FEE_TAKER. Angka asli `result` dari `backtest.js` ikut disimpan di `meta.backtestJsResult` untuk dicocokkan.
+
 ## Format `public/backtest.json`
 
-Ekspor dari skrip backtest. Semua angka berasal dari backtest dengan data asli Indodax.
+Formatnya seperti di bawah. Semua angka berasal dari backtest dengan data asli Indodax.
 
 ```json
 {
