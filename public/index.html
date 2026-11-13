@@ -3,159 +3,368 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dashboard Bot Dry Run EMA Crossover</title>
+<title>Dashboard UAS — Bot Dry Run Indodax</title>
 <style>
-:root{--bg:#eef2f6;--panel:#fff;--ink:#14213d;--mute:#5b6b82;--line:#d6dde7;--ok:#0f766e;--warn:#b45309;--bad:#b42318;--okbg:#dcf3ef;--badbg:#fde8e6;--warnbg:#fdf0dc}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1724;--panel:#17233a;--ink:#e6ecf5;--mute:#93a3bb;--line:#2a3a57;--ok:#5fd3c4;--warn:#f0b35a;--bad:#ff8b80;--okbg:#12363a;--badbg:#44211f;--warnbg:#3d2f14}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif;padding:24px 16px 48px}
-main{max-width:1000px;margin:0 auto}
-h1{font-size:26px;margin:0 0 2px;letter-spacing:-.01em}
-h2{font-size:17px;margin:32px 0 10px}
-.sub{color:var(--mute);margin:0 0 18px}
-.banner{border-radius:10px;padding:16px 18px;border-left:6px solid var(--ok);background:var(--okbg)}
-.banner.bad{border-color:var(--bad);background:var(--badbg)}
-.banner.warn{border-color:var(--warn);background:var(--warnbg)}
-.banner b{font-size:18px;display:block}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px}
-.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-.kpi .l{color:var(--mute);font-size:13px}
-.kpi .v{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}
-.kpi .n{color:var(--mute);font-size:12px}
-.box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:14px}
-th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
-th{color:var(--mute);font-weight:600}
-td.msg{white-space:normal}
-.tag{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px}
-.tag.ok{background:var(--okbg);color:var(--ok)}.tag.bad{background:var(--badbg);color:var(--bad)}
-.note{color:var(--mute);font-size:13px;margin-top:8px}
-svg{width:100%;height:auto;display:block}
+  :root{--bg:#f6f7f5;--card:#fff;--ink:#1c2420;--mute:#66706b;--line:#e2e6e3;--acc:#1f7a52;--acc2:#e7f3ec;--bad:#b3261e;--badbg:#fdecea;--warn:#8a5a00;--warnbg:#fff5dc;--ok:#1f7a52;--okbg:#e7f3ec}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{padding:28px 32px 8px;max-width:1240px;margin:auto}
+  h1{margin:0;font-size:26px}
+  .sub{color:var(--mute);margin-top:2px}
+  nav{position:sticky;top:0;background:rgba(246,247,245,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:5}
+  nav div{max-width:1240px;margin:auto;padding:8px 32px;display:flex;gap:4px;flex-wrap:wrap}
+  nav a{font-size:13px;color:var(--ink);text-decoration:none;padding:4px 10px;border-radius:99px}
+  nav a:hover{background:var(--acc2)}
+  main{max-width:1240px;margin:auto;padding:8px 32px 60px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0}
+  h2{margin:0 0 4px;font-size:19px}
+  h2 small{font-weight:500;color:var(--mute);font-size:13px;margin-left:6px}
+  h3{font-size:15px;margin:18px 0 8px}
+  .desc{color:var(--mute);font-size:13.5px;margin:0 0 14px}
+  .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  .two{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+  @media(max-width:860px){.two{grid-template-columns:1fr}header,main,nav div{padding-left:16px;padding-right:16px}}
+  .kpi{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fbfcfb}
+  .kpi .l{font-size:12.5px;color:var(--mute)}
+  .kpi .v{font-size:22px;font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}
+  .kpi .n{font-size:12px;color:var(--mute);margin-top:2px}
+  .pos{color:var(--ok)} .neg{color:var(--bad)}
+  .alert{border-radius:10px;padding:10px 14px;margin:8px 0;font-size:14px}
+  .alert.bad{background:var(--badbg);color:#5c1510;border:1px solid #f3c5c0}
+  .alert.warn{background:var(--warnbg);color:#4d3300;border:1px solid #f0dca4}
+  .alert.ok{background:var(--okbg);color:#123d29;border:1px solid #bfe0cd}
+  table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+  th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+  th{color:var(--mute);font-weight:600;background:#fafbfa;position:sticky;top:0}
+  td:first-child,th:first-child,td.l,th.l{text-align:left}
+  .scroll{max-height:380px;overflow:auto;border:1px solid var(--line);border-radius:8px}
+  .tag{display:inline-block;font-size:11.5px;padding:1px 8px;border-radius:99px;font-weight:600}
+  .tag.ok{background:var(--okbg);color:var(--ok)} .tag.bad{background:var(--badbg);color:var(--bad)} .tag.mute{background:#eef0ee;color:var(--mute)}
+  .chart{width:100%;height:260px}
+  .legend{font-size:12.5px;color:var(--mute);display:flex;gap:16px;margin-top:4px}
+  .legend i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:5px}
+  dl.rules{display:grid;grid-template-columns:200px 1fr;gap:6px 16px;margin:0;font-size:14px}
+  dl.rules dt{color:var(--mute)} dl.rules dd{margin:0}
+  .todo{color:var(--warn);background:var(--warnbg);padding:0 4px;border-radius:4px}
+  .btn{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;padding:6px 12px;border-radius:8px;cursor:pointer;margin:4px 6px 0 0}
+  .btn:hover{border-color:var(--acc);color:var(--acc)}
+  .refl p{margin:6px 0}
+  .foot{color:var(--mute);font-size:12.5px;text-align:center;margin-top:24px}
+  #loading{padding:40px;text-align:center;color:var(--mute)}
 </style>
 </head>
 <body>
+<!--
+  ============================================================================
+  BAGIAN YANG DIISI SENDIRI (teks, bukan angka hasil). Semua ANGKA dihitung
+  otomatis oleh metrics.js dari /api/data (log mentah) dan backtest.json.
+  ============================================================================
+-->
+<script>
+window.UAS_INFO = {
+  nama: "Nyssa Mutiara",                       // ganti dengan nama lengkap
+  nim: "ISI NIM",
+  repo: "https://github.com/nyssamutiara-prog/uas-indodax-bot",
+  freezeCommit: "ISI hash commit freeze (git log)",
+  freezeTime: "Rabu 4 Nov 2026 12.00 WIB",
+  strategi: {
+    nama: "EMA crossover (long-only)",
+    masuk: "ISI: mis. BUY saat EMA cepat(n) memotong ke atas EMA lambat(m) pada candle 1 jam yang sudah tertutup",
+    keluar: "ISI: mis. SELL saat EMA cepat memotong ke bawah EMA lambat",
+    sizing: "ISI: fraksi ekuitas per posisi (POS_FRAC) & batas posisi (MAX_POSITIONS)",
+    parameter: "ISI: panjang EMA cepat/lambat, DAILY_LOSS_LIMIT, MIN_ORDER_IDR = Rp25.000",
+    timeframe: "1 jam (candle Indodax tf=60), dipanggil tiap jam menit ke-7",
+    universe: "BTC/IDR, ETH/IDR, BNB/IDR",
+    kriteriaUniverse: "ISI: kriteria likuiditas yang diukur pada AWAL periode backtest (hindari survivorship bias)",
+    perubahanDariUTS: "ISI: UTS = Pullback RSI(3) saham KOMPAS100 harian → apa saja yang diubah untuk kripto & alasannya",
+  },
+  biaya: {
+    feeApi: "ISI: trade_fee_percent_taker dari https://indodax.com/api/pairs (diakses: tanggal)",
+    feeResmi: "ISI: tarif taker all-in dari help.indodax.com — Rincian Biaya Transaksi (diakses: tanggal)",
+    feeDipakai: "ISI: yang lebih mahal dari keduanya",
+    minOrder: "Rp25.000 (lebih ketat dari trade_min_base_currency Rp10.000)",
+  },
+  // Refleksi ditulis sendiri. Pakai angka dari bagian "Fakta otomatis" di bawahnya.
+  refleksi: [
+    "ISI paragraf refleksi 1: perbedaan backtest vs forward test dan penyebabnya (dalam angka).",
+    "ISI paragraf refleksi 2: dampak keterlambatan/terlewatnya jadwal dan error 403 terhadap hasil.",
+    "ISI paragraf refleksi 3: perbandingan spread yang dipakai backtest vs spread dari seluruh snapshot.",
+  ],
+};
+</script>
+
+<header>
+  <h1>Dashboard UAS — Bot Dry Run Indodax</h1>
+  <div class="sub" id="hdrsub">Algorithmic Trading (Trad1 &amp; Trad2) · forward test 4–14 Nov 2026</div>
+</header>
+<nav><div>
+  <a href="#status">Status</a><a href="#strategi">Strategi</a><a href="#metrik">Metrik wajib</a><a href="#gap">Gap BT vs FT</a>
+  <a href="#ekuitas">Ekuitas</a><a href="#eksekusi">Eksekusi</a><a href="#risk">Risk mgmt</a><a href="#ops">Operasional</a>
+  <a href="#sinyal">Log sinyal</a><a href="#refleksi">Refleksi</a><a href="#data">Data mentah</a>
+</div></nav>
 <main>
-<h1>Bot dry run EMA crossover</h1>
-<p class="sub">Forward test Indodax, mulai 4 Nov 2026 12.00 WIB. Semua angka dihitung dari log di /api/data.</p>
-<div id="status" class="banner warn"><b>Memuat data…</b></div>
-<div class="kpis" id="kpis"></div>
-
-<h2>Equity</h2>
-<div class="box"><div id="chart"></div><div class="note" id="eqnote"></div></div>
-
-<h2>Candle diproses per pasangan</h2>
-<div class="box"><table id="pairs"></table></div>
-
-<h2>Error API</h2>
-<div class="box"><table id="errs"></table></div>
-
-<h2>Riwayat panggilan bot</h2>
-<div class="box"><table id="calls"></table></div>
-
-<h2>Metrik backtest dan trade</h2>
-<div class="box" id="orders"></div>
+  <div id="loading">Memuat log bot dari <code>/api/data</code>…</div>
+  <div id="app" hidden></div>
+  <div class="foot" id="foot"></div>
 </main>
 
+<script src="metrics.js"></script>
 <script>
-const START = Date.parse('2026-11-04T05:00:00Z'); // freeze 4 Nov 12.00 WIB
-const END = Date.parse('2026-11-14T05:00:00Z');   // akhir 10 hari
-const rp = n => 'Rp' + Math.round(n).toLocaleString('id-ID');
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const wib = iso => new Date(iso).toLocaleString('id-ID', {timeZone:'Asia/Jakarta', day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit'}) + ' WIB';
-const $ = id => document.getElementById(id);
+(function(){
+  const I = window.UAS_INFO;
+  const $ = (h) => { const d = document.createElement("div"); d.innerHTML = h; return d.firstElementChild; };
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+  const NA = '<span class="tag mute">belum ada data</span>';
+  const pct = (x, d = 2, sign = true) => x == null || !isFinite(x) ? (x === Infinity ? "∞" : "—") : (sign && x > 0 ? "+" : "") + (x * 100).toLocaleString("id-ID", { minimumFractionDigits: d, maximumFractionDigits: d }) + "%";
+  const num = (x, d = 0) => x == null || !isFinite(x) ? "—" : x.toLocaleString("id-ID", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const rp = (x) => x == null || !isFinite(x) ? "—" : (x < 0 ? "−" : "") + "Rp" + Math.abs(x).toLocaleString("id-ID", { maximumFractionDigits: 0 });
+  const cls = (x) => x == null ? "" : x > 0 ? "pos" : x < 0 ? "neg" : "";
+  const wib = (t) => { if (t == null) return "—"; const d = new Date(typeof t === "number" ? (t < 1e12 ? t * 1000 : t) : t); return d.toLocaleString("id-ID", { timeZone: "Asia/Jakarta", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }) + " WIB"; };
+  const todo = (s) => /^ISI/.test(s) ? `<span class="todo">${esc(s)}</span>` : esc(s);
+  const kpi = (l, v, n, c) => `<div class="kpi"><div class="l">${l}</div><div class="v ${c || ""}">${v}</div>${n ? `<div class="n">${n}</div>` : ""}</div>`;
 
-function kpi(l, v, n){ return '<div class="kpi"><div class="l">'+l+'</div><div class="v">'+v+'</div><div class="n">'+(n||'')+'</div></div>'; }
+  function line(seriesList, opts = {}) {
+    const W = 1000, H = 260, P = { l: 70, r: 16, t: 14, b: 28 };
+    const all = seriesList.flatMap((s) => s.data);
+    if (all.length < 2) return `<div class="desc">${NA}</div>`;
+    const tx = all.map((p) => Date.parse(p.t)), ty = all.map((p) => p.equity);
+    let x0 = Math.min(...tx), x1 = Math.max(...tx), y0 = Math.min(...ty), y1 = Math.max(...ty);
+    if (y0 === y1) { y0 -= y0 * 0.01 || 1; y1 += y1 * 0.01 || 1; }
+    const pad = (y1 - y0) * 0.08; y0 -= pad; y1 += pad;
+    const X = (t) => P.l + (Date.parse(t) - x0) / (x1 - x0 || 1) * (W - P.l - P.r);
+    const Y = (v) => P.t + (1 - (v - y0) / (y1 - y0)) * (H - P.t - P.b);
+    let g = "";
+    for (let i = 0; i <= 4; i++) { const v = y0 + (y1 - y0) * i / 4; g += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#e8ebe9"/><text x="${P.l - 8}" y="${Y(v) + 4}" font-size="11" text-anchor="end" fill="#66706b">${opts.fmt ? opts.fmt(v) : num(v / 1e6, 1) + " jt"}</text>`; }
+    g += `<text x="${P.l}" y="${H - 8}" font-size="11" fill="#66706b">${wib(new Date(x0).toISOString())}</text><text x="${W - P.r}" y="${H - 8}" font-size="11" text-anchor="end" fill="#66706b">${wib(new Date(x1).toISOString())}</text>`;
+    for (const s of seriesList) { if (s.data.length < 2) continue; g += `<polyline fill="none" stroke="${s.color}" stroke-width="2" ${s.dash ? 'stroke-dasharray="5 4"' : ""} points="${s.data.map((p) => X(p.t).toFixed(1) + "," + Y(p.equity).toFixed(1)).join(" ")}"/>`; }
+    return `<svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${g}</svg><div class="legend">${seriesList.map((s) => `<span><i style="background:${s.color}"></i>${s.name}</span>`).join("")}</div>`;
+  }
 
-function chart(pts){
-  if(pts.length < 2){ return '<p class="note">Belum cukup data equity untuk digambar.</p>'; }
-  const W=700,H=180,P=28, vals=pts.map(p=>p.v);
-  let lo=Math.min(...vals), hi=Math.max(...vals);
-  if(lo===hi){ lo-=1; hi+=1; }
-  const x=i=>P+(W-2*P)*i/(pts.length-1), y=v=>H-P-(H-2*P)*(v-lo)/(hi-lo);
-  const d=pts.map((p,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(p.v).toFixed(1)).join(' ');
-  return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Grafik equity">'+
-    '<line x1="'+P+'" x2="'+(W-P)+'" y1="'+(H-P)+'" y2="'+(H-P)+'" stroke="var(--line)"/>'+
-    '<path d="'+d+'" fill="none" stroke="var(--ok)" stroke-width="2.5"/>'+
-    '<text x="'+P+'" y="14" font-size="11" fill="var(--mute)">'+rp(hi)+'</text>'+
-    '<text x="'+P+'" y="'+(H-8)+'" font-size="11" fill="var(--mute)">'+rp(lo)+'</text></svg>';
-}
+  function table(cols, rows, empty) {
+    if (!rows.length) return `<div class="desc">${empty || NA}</div>`;
+    return `<div class="scroll"><table><thead><tr>${cols.map((c) => `<th class="${c.l ? "l" : ""}">${c.h}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr>${cols.map((c) => `<td class="${c.l ? "l" : ""}">${c.f(r)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  }
 
-fetch('/api/data').then(async r=>{
-  const t = await r.text();
-  if(!r.ok) throw new Error('HTTP '+r.status+': '+t.slice(0,200));
-  return JSON.parse(t);
-}).then(d=>{
-  const calls = d.calls || [];
-  const okCalls = calls.filter(c=>!(c.errors||[]).length);
-  const failCalls = calls.filter(c=>(c.errors||[]).length);
-  let streak = 0;
-  for(let i=calls.length-1;i>=0;i--){ if((calls[i].errors||[]).length) streak++; else break; }
-  const lastOk = okCalls.length ? okCalls[okCalls.length-1] : null;
+  function statsKpis(s, label) {
+    if (!s || !s.n) return kpi(`Jumlah trade ${label}`, s ? "0" : "—", s ? "belum ada trade tertutup" : "backtest.json belum ada");
+    return [
+      kpi(`Jumlah trade ${label}`, num(s.n)),
+      kpi("Win rate", pct(s.winRate, 1, false)),
+      kpi("Profit factor", s.profitFactor === Infinity ? "∞" : num(s.profitFactor, 2)),
+      kpi("Rata-rata untung/trade", pct(s.avgWinPct), rp(s.avgWinIdr), "pos"),
+      kpi("Rata-rata rugi/trade", pct(s.avgLossPct), rp(s.avgLossIdr), "neg"),
+      kpi("Porsi biaya", s.costShare == null ? "—" : pct(s.costShare, 1, false), `(fee ${rp(s.totalFee)} + spread ${rp(s.totalSpread)} + slip ${rp(s.totalSlippage)}) ÷ laba kotor ${rp(s.grossPnl)}`),
+    ].join("");
+  }
 
-  // status
-  const st = $('status');
-  if(!calls.length){ st.className='banner warn'; st.innerHTML='<b>Belum ada panggilan bot</b>Log kosong.'; }
-  else if(streak>0){
-    const lastErr = calls[calls.length-1].errors[0].msg;
-    st.className='banner bad';
-    st.innerHTML='<b>Bot gagal terhubung ke Indodax</b>'+streak+' panggilan terakhir error: '+esc(lastErr)+'.'+
-      (lastOk?' Panggilan sukses terakhir: '+wib(lastOk.t)+'.':'');
-  } else { st.className='banner'; st.innerHTML='<b>Bot berjalan normal</b>Panggilan terakhir: '+wib(calls[calls.length-1].t)+'.'; }
+  function render(data, backtest, source) {
+    const M = UASMetrics.compute(data, backtest);
+    window.UAS_LAST = { M, data, backtest };
+    const o = M.ops, f = M.fwd, b = M.bt, g = M.gap;
+    const app = document.getElementById("app");
+    const S = [];
+    document.getElementById("hdrsub").innerHTML = `${esc(I.nama)} · ${esc(I.nim)} · Algorithmic Trading (Trad1 &amp; Trad2) · forward test ${wib(M.config.FORWARD_START)} – ${wib(M.config.FORWARD_END)}`;
 
-  // candle diproses
-  const seen = new Set(), perPair = {};
-  calls.forEach(c=>(c.processed||[]).forEach(p=>{
-    const k=p.pair+'|'+p.candle;
-    if(!seen.has(k)){ seen.add(k); (perPair[p.pair]=perPair[p.pair]||{n:0,beli:0,jual:0,hold:0}).n++;
-      if(p.action==='BUY') perPair[p.pair].beli++; else if(p.action==='SELL') perPair[p.pair].jual++; else perPair[p.pair].hold++; }
-  }));
-  const pairs = Object.keys(perPair).sort();
-  const now = Math.min(Date.now(), END);
-  const expected = Math.max(0, Math.floor((now-START)/3600000));
-  const totalProc = seen.size;
-  const uptime = (expected && pairs.length) ? Math.min(100, totalProc/(expected*pairs.length)*100) : 0;
+    // ---------- Status ----------
+    const al = [];
+    if (o.tickFails) al.push(["bad", `<b>Bot gagal berjalan sejak ${wib(o.firstTickFail)}.</b> ${o.tickFails} panggilan berakhir dengan <code>${esc(Object.keys(o.errTypes)[0] || "")}</code>. Run sukses terakhir yang memproses candle: ${wib(o.lastOkRun)} (jeda ${num(o.tailGapH, 1)} jam sampai log terakhir).`]);
+    if (o.uptimeSoFar != null && o.uptimeSoFar < 0.8) al.push(["bad", `<b>Uptime ${pct(o.uptimeSoFar, 1, false)}</b> (${o.onTimeCandles} dari ${o.elapsedCandles} candle 1 jam yang sudah lewat diproses tepat waktu). Rubrik: &lt;80% = rendah, kecuali gangguan Indodax/Vercel tercatat di log.`]);
+    if (o.unseenCross.length) al.push(["warn", `<b>${o.unseenCross.length} persilangan EMA terjadi di antara candle yang tidak dibaca bot</b> (bot hanya membaca candle tertutup terakhir tiap kali dipanggil). Lihat bagian Gap.`]);
+    if (M.spread.every((s) => s.nPreFreeze === 0)) al.push(["warn", `<b>Tidak ada snapshot order book sebelum freeze.</b> Snapshot pertama ${wib((data.snapshots[0] || {}).t)}. Spread backtest wajib berasal dari snapshot terukur — jelaskan sumber angka spread backtest di refleksi.`]);
+    if (!backtest) al.push(["warn", `<b>backtest.json belum ada.</b> Metrik backtest, CAGR, dan pencocokan sinyal candle-demi-candle akan muncul otomatis setelah file hasil backtest di-upload ke <code>public/backtest.json</code> (format: lihat README_DASHBOARD).`]);
+    if (o.unclosedUsed === 0 && data.signals.length) al.push(["ok", `Semua ${data.signals.length} sinyal dihitung dari candle yang sudah tertutup (diproses ≥ waktu tutup candle). Duplikat candle: ${o.duplicates}.`]);
+    S.push(`<section id="status"><h2>Status bot <small>dihitung ${wib(o.asOf)} · sumber: ${esc(source)}</small></h2>
+      <p class="desc">Semua angka di halaman ini dihitung otomatis dari log mentah (${M.generatedFrom.calls} panggilan, ${M.generatedFrom.signals} sinyal, ${M.generatedFrom.orders} order, ${M.generatedFrom.errors} error, ${M.generatedFrom.snapshots} snapshot). Skrip <code>scripts/hitung_ulang.mjs</code> memakai fungsi yang sama.</p>
+      ${al.map(([c, t]) => `<div class="alert ${c}">${t}</div>`).join("")}
+      <div class="grid" style="margin-top:12px">
+        ${kpi("Uptime sejauh ini", pct(o.uptimeSoFar, 1, false), `${o.onTimeCandles} / ${o.elapsedCandles} candle`, o.uptimeSoFar >= .95 ? "pos" : "neg")}
+        ${kpi("Panggilan terjadwal vs terlaksana", `${o.scheduledCalls} / ${o.runs}`, `${o.okRuns} sukses · ${o.failedRuns} gagal`)}
+        ${kpi("Error API", num(o.errorsTotal), `${o.tickFails} tick gagal`, o.errorsTotal ? "neg" : "")}
+        ${kpi("Kill switch dipakai", num(o.killUses))}
+        ${kpi("Ekuitas terakhir", rp(f.equity ? f.equity.series[f.equity.series.length - 1].equity : null), `kas ${rp(f.cash)}`)}
+        ${kpi("Posisi terbuka", num(f.openPositions.length))}
+      </div></section>`);
 
-  // equity
-  const eq = calls.filter(c=>typeof c.equity==='number').map(c=>({t:c.t,v:c.equity}));
-  const lastEq = eq.length ? eq[eq.length-1].v : null;
-  const ret = lastEq!==null ? (lastEq/100000000-1)*100 : null;
+    // ---------- Strategi ----------
+    const st = I.strategi, bi = I.biaya;
+    S.push(`<section id="strategi"><h2>Strategi tertulis &amp; bukti freeze</h2>
+      <p class="desc">Aturan dibekukan sejak freeze date. Long-only, tanpa short/margin/leverage. Modal virtual Rp100.000.000.</p>
+      <dl class="rules">
+        <dt>Strategi</dt><dd>${todo(st.nama)}</dd><dt>Aturan masuk</dt><dd>${todo(st.masuk)}</dd><dt>Aturan keluar</dt><dd>${todo(st.keluar)}</dd>
+        <dt>Sizing</dt><dd>${todo(st.sizing)}</dd><dt>Parameter</dt><dd>${todo(st.parameter)}</dd><dt>Timeframe</dt><dd>${todo(st.timeframe)}</dd>
+        <dt>Universe</dt><dd>${todo(st.universe)} <span class="tag mute">di log: ${o.pairs.join(", ")}</span></dd><dt>Kriteria universe</dt><dd>${todo(st.kriteriaUniverse)}</dd>
+        <dt>Perubahan dari UTS</dt><dd>${todo(st.perubahanDariUTS)}</dd>
+        <dt>Fee /api/pairs</dt><dd>${todo(bi.feeApi)}</dd><dt>Fee halaman resmi</dt><dd>${todo(bi.feeResmi)}</dd><dt>Fee yang dipakai</dt><dd>${todo(bi.feeDipakai)}</dd><dt>Minimum order</dt><dd>${todo(bi.minOrder)}</dd>
+        <dt>Commit freeze</dt><dd>${todo(I.freezeCommit)} · ${esc(I.freezeTime)}</dd><dt>Repositori</dt><dd><a href="${esc(I.repo)}">${esc(I.repo)}</a></dd>
+      </dl></section>`);
 
-  const errCount = calls.reduce((n,c)=>n+(c.errors||[]).length,0);
-  const killCount = calls.reduce((n,c)=>n+(c.notes||[]).filter(x=>/kill/i.test(String(x))).length,0);
+    // ---------- Metrik wajib ----------
+    const be = b && b.equity, fe = f.equity, fb = f.benchmark, bb = b && b.benchmark;
+    S.push(`<section id="metrik"><h2>Metrik wajib</h2>
+      <p class="desc">Forward test tidak menampilkan CAGR (10 hari tidak bermakna). Porsi biaya = (fee + spread + slippage) ÷ laba kotor.</p>
+      <div class="two"><div>
+        <h3>Backtest ${be ? `<small>${wib(be.start)} – ${wib(be.end)} · ${num(be.years, 1)} tahun</small>` : ""}</h3>
+        <div class="grid">${be ? kpi("Return total", pct(be.totalReturn), "", cls(be.totalReturn)) + kpi("CAGR", pct(be.cagr), "", cls(be.cagr)) + kpi("Max drawdown", pct(be.mdd), `${wib(be.peakT)} → ${wib(be.troughT)}`, "neg") : kpi("Return total / CAGR / MDD", "—", "upload public/backtest.json")}
+        ${bb ? kpi("Buy &amp; hold BTC/IDR", pct(bb.totalReturn), `CAGR ${pct(bb.cagr)} · MDD ${pct(bb.mdd)}`, cls(bb.totalReturn)) : ""}
+        ${statsKpis(b && b.stats, "")}</div>
+      </div><div>
+        <h3>Forward test <small>${fe ? `${wib(fe.start)} – ${wib(fe.end)}` : ""}</small></h3>
+        <div class="grid">${fe ? kpi("Return total", pct(fe.totalReturn), `ekuitas dinilai di best bid`, cls(fe.totalReturn)) + kpi("Max drawdown", pct(fe.mdd), fe.mdd ? `${wib(fe.peakT)} → ${wib(fe.troughT)}` : "", fe.mdd ? "neg" : "") : kpi("Return total", "—")}
+        ${fb ? kpi("Buy &amp; hold BTC/IDR", pct(fb.ret), `beli ask ${wib(fb.from)} · nilai bid ${wib(fb.to)} · close-ke-close ${pct(fb.closeRet)}`, cls(fb.ret)) : kpi("Buy &amp; hold BTC/IDR", "—")}
+        ${statsKpis(f.stats, "")}</div>
+      </div></div></section>`);
 
-  $('kpis').innerHTML =
-    kpi('Equity terakhir', lastEq!==null?rp(lastEq):'-', lastEq!==null?'dari Rp100.000.000 modal awal':'') +
-    kpi('Return forward test', ret!==null?ret.toFixed(2)+'%':'-', 'dinilai di best bid') +
-    kpi('Panggilan sukses', okCalls.length+' dari '+calls.length, failCalls.length+' panggilan error') +
-    kpi('Candle diproses', totalProc, 'dari ±'+(expected*pairs.length)+' seharusnya') +
-    kpi('Uptime (estimasi)', uptime.toFixed(1)+'%', 'kasar: candle unik diproses ÷ candle berjalan') +
-    kpi('Error API', errCount, 'termasuk percobaan ulang') +
-    kpi('Kill switch dipakai', killCount+' kali', 'dari catatan log');
+    // ---------- Gap ----------
+    const crossRows = o.unseenCross;
+    let gapHtml = "";
+    if (g) {
+      gapHtml = `<div class="grid">
+        ${kpi("Kecocokan sinyal per candle", pct(g.matchRate, 1, false), `${g.matches} cocok dari ${g.candlesCompared} candle×pasangan`, g.matchRate === 1 ? "pos" : "neg")}
+        ${kpi("Candle hanya di backtest", num(g.onlyBacktest), "tidak diproses bot (jadwal/error)")}
+        ${kpi("Return BT jendela 10 hari", pct(g.btWindow && g.btWindow.totalReturn), "", cls(g.btWindow && g.btWindow.totalReturn))}
+        ${kpi("Return FT", pct(fe && fe.totalReturn), "", cls(fe && fe.totalReturn))}
+        ${kpi("Gap return (FT − BT)", pct(g.returnGap), "", cls(g.returnGap))}
+        ${kpi("Trade BT jendela vs FT", `${g.btWindowStats.n} vs ${f.stats.n}`)}
+      </div>
+      <h3>Sinyal yang tidak cocok</h3>${table([{ h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Candle", f: (r) => wib(r.candleT) }, { h: "Backtest", f: (r) => r.bt }, { h: "Forward", f: (r) => r.fw }], g.mismatches, '<span class="tag ok">tidak ada — semua candle yang diproses identik</span>')}
+      <h3>Selisih harga fill per trade</h3>${table([{ h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Candle masuk", f: (r) => wib(r.entryCandleT) }, { h: "Entry BT", f: (r) => num(r.btEntry) }, { h: "Entry FT", f: (r) => num(r.fwEntry) }, { h: "Selisih", f: (r) => pct(r.entryDiff, 3) }, { h: "Exit BT", f: (r) => num(r.btExit) }, { h: "Exit FT", f: (r) => num(r.fwExit) }, { h: "Selisih", f: (r) => pct(r.exitDiff, 3) }, { h: "PnL BT", f: (r) => pct(r.btPnlPct) }, { h: "PnL FT", f: (r) => pct(r.fwPnlPct) }], g.fillDiff, "Belum ada trade forward yang bisa dipasangkan dengan trade backtest (dicocokkan lewat candle masuk).")}
+      <h3>Semua candle (backtest vs forward)</h3>${table([{ h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Candle", f: (r) => wib(r.candleT) }, { h: "Backtest", f: (r) => r.bt ?? "—" }, { h: "Forward", f: (r) => r.fw ?? '<span class="tag mute">tidak diproses</span>' }, { h: "", f: (r) => r.bt == null || r.fw == null ? "" : r.bt === r.fw ? '<span class="tag ok">cocok</span>' : '<span class="tag bad">beda</span>' }], g.rows)}`;
+    } else {
+      gapHtml = `<div class="alert warn">Pencocokan candle-demi-candle membutuhkan hasil <b>backtest yang dijalankan ulang pada jendela forward test</b> (bagian <code>window.signals</code> di <code>public/backtest.json</code>). Sementara itu, ${o.processedCandles} candle sudah diproses bot dan siap dicocokkan.</div>`;
+    }
+    S.push(`<section id="gap"><h2>Gap backtest vs forward test <small>jendela 10 hari yang sama</small></h2>
+      <p class="desc">Target: sinyal identik candle demi candle (kode sinyal sama). Selisih harga fill dijelaskan dengan spread, slippage, dan keterlambatan jadwal (lihat dekomposisi di bagian Eksekusi).</p>
+      ${gapHtml}
+      <h3>Persilangan EMA di antara candle yang tidak dibaca bot</h3>
+      <p class="desc">Dihitung dari nilai fast/slow di log sinyal: tanda (fast − slow) berubah di antara dua candle yang diproses berurutan. Persilangan di candle yang dilewati tidak terlihat oleh bot, sedangkan backtest membaca semua candle.</p>
+      ${table([{ h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Dari candle", f: (r) => wib(r.from) }, { h: "Ke candle", f: (r) => wib(r.to) }, { h: "Candle dilewati", f: (r) => num(r.skippedCandles) }, { h: "Arah", l: 1, f: (r) => r.dir }, { h: "Sinyal bot", f: (r) => r.signalAtTo }], crossRows, '<span class="tag ok">tidak ada</span>')}
+    </section>`);
 
-  $('chart').innerHTML = chart(eq);
-  $('eqnote').textContent = eq.length ? 'Titik equity hanya dari panggilan yang berhasil ('+eq.length+' titik).' : '';
+    // ---------- Ekuitas ----------
+    const ser = [{ name: "Forward test (ekuitas di best bid)", color: "#1f7a52", data: fe ? fe.series : [] }];
+    if (fb) ser.push({ name: "Buy & hold BTC/IDR", color: "#c0841a", dash: 1, data: fb.series });
+    if (g && g.btWindow) ser.push({ name: "Backtest jendela yang sama", color: "#3a5fb0", dash: 1, data: g.btWindow.series });
+    S.push(`<section id="ekuitas"><h2>Kurva ekuitas</h2>
+      <p class="desc">Forward test: dari setiap panggilan bot yang mencatat ekuitas. Benchmark: beli BTC di ask snapshot pertama, dinilai di bid tiap snapshot.</p>
+      ${line(ser)}
+      ${be ? `<h3>Backtest periode penuh</h3>${line([{ name: "Backtest", color: "#3a5fb0", data: be.series }].concat(bb ? [{ name: "Buy & hold BTC/IDR", color: "#c0841a", dash: 1, data: bb.series }] : []))}` : ""}
+      <h3>Equity harian (panggilan pertama setelah 00.00 WIB)</h3>
+      ${table([{ h: "Hari (WIB)", l: 1, f: (r) => r.day }, { h: "Waktu catat", f: (r) => wib(r.t) }, { h: "Ekuitas", f: (r) => rp(r.equity) }], f.dailyEquity)}
+    </section>`);
 
-  $('pairs').innerHTML = '<tr><th>Pasangan</th><th>Candle diproses</th><th>HOLD</th><th>BUY</th><th>SELL</th></tr>' +
-    (pairs.length ? pairs.map(p=>'<tr><td>'+esc(p.toUpperCase())+'</td><td>'+perPair[p].n+'</td><td>'+perPair[p].hold+'</td><td>'+perPair[p].beli+'</td><td>'+perPair[p].jual+'</td></tr>').join('') : '<tr><td colspan="5">Belum ada candle diproses.</td></tr>');
+    // ---------- Eksekusi ----------
+    S.push(`<section id="eksekusi"><h2>Eksekusi realistis</h2>
+      <p class="desc">Beli di ask, jual di bid dari order book live (kedalaman dihabiskan bila order lebih besar dari level terbaik). Dekomposisi tiap order: total selisih vs harga sinyal (close) = keterlambatan (mid saat eksekusi vs close) + setengah spread + slippage di luar level terbaik.</p>
+      <h3>Log order simulasi</h3>
+      ${table([{ h: "Waktu", l: 1, f: (r) => wib(r.t) }, { h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Sisi", f: (r) => r.side }, { h: "Qty", f: (r) => num(r.qty, 8) }, { h: "Best bid", f: (r) => num(r.bestBid) }, { h: "Best ask", f: (r) => num(r.bestAsk) }, { h: "Fill rata-rata", f: (r) => num(r.fill) }, { h: "Fee", f: (r) => rp(r.fee) }, { h: "Harga sinyal", f: (r) => num(r.signalPrice) }, { h: "Total vs sinyal", f: (r) => pct(r.total, 3) }, { h: "Keterlambatan", f: (r) => pct(r.delay, 3) }, { h: "½ spread", f: (r) => pct(r.halfSpread, 3) }, { h: "Slippage", f: (r) => pct(r.slip, 3) }], f.orders, `<span class="tag mute">0 order</span> — selama forward test belum ada sinyal BUY/SELL yang dieksekusi.`)}
+      <h3>Trade tertutup</h3>
+      ${table([{ h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Masuk", f: (r) => wib(r.entryT) }, { h: "Keluar", f: (r) => wib(r.exitT) }, { h: "Entry", f: (r) => num(r.entryPrice) }, { h: "Exit", f: (r) => num(r.exitPrice) }, { h: "PnL", f: (r) => `<span class="${cls(r.pnl)}">${rp(r.pnl)}</span>` }, { h: "PnL %", f: (r) => pct(r.pnlPct) }, { h: "Fee", f: (r) => rp(r.fee) }, { h: "Spread", f: (r) => rp(r.spreadCost) }, { h: "Slippage", f: (r) => rp(r.slippageCost) }], f.trades, '<span class="tag mute">0 trade tertutup</span>')}
+      ${f.openPositions.length ? `<h3>Posisi terbuka</h3>${table([{ h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Qty", f: (r) => num(r.qty, 8) }, { h: "Harga rata-rata", f: (r) => num(r.avg) }, { h: "Bid terakhir", f: (r) => num(r.lastBid) }, { h: "Unrealized", f: (r) => rp(r.unrealized) }], f.openPositions)}` : ""}
+      <h3>Spread dari snapshot order book</h3>
+      <p class="desc">Spread = (ask − bid) ÷ ask. "Asumsi backtest" diambil dari <code>backtest.json → meta.spreadAssumption</code>.</p>
+      ${table([{ h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Snapshot", f: (r) => num(r.n) }, { h: "Sebelum freeze", f: (r) => r.nPreFreeze ? num(r.nPreFreeze) : '<span class="tag bad">0</span>' }, { h: "Median", f: (r) => pct(r.median, 4, false) }, { h: "Rata-rata", f: (r) => pct(r.mean, 4, false) }, { h: "P90", f: (r) => pct(r.p90, 4, false) }, { h: "Maks", f: (r) => pct(r.max, 4, false) }, { h: "> 2%", f: (r) => num(r.over2pct) }, { h: "Asumsi backtest", f: (r) => r.assumed == null ? "—" : pct(r.assumed, 4, false) }, { h: "Asumsi slippage", f: (r) => r.slipAssumed == null ? "—" : pct(r.slipAssumed, 4, false) }], M.spread)}
+    </section>`);
 
-  const byMsg = {}; calls.forEach(c=>(c.errors||[]).forEach(e=>{
-    const k=e.msg; (byMsg[k]=byMsg[k]||{n:0,first:c.t,last:c.t}).n++; byMsg[k].last=c.t; }));
-  const km = Object.keys(byMsg);
-  $('errs').innerHTML = '<tr><th>Pesan error</th><th>Jumlah</th><th>Pertama</th><th>Terakhir</th></tr>' +
-    (km.length ? km.map(k=>'<tr><td class="msg">'+esc(k)+'</td><td>'+byMsg[k].n+'</td><td>'+wib(byMsg[k].first)+'</td><td>'+wib(byMsg[k].last)+'</td></tr>').join('') : '<tr><td colspan="4">Tidak ada error.</td></tr>');
+    // ---------- Risk ----------
+    S.push(`<section id="risk"><h2>Risk management — bukti dari log</h2>
+      <p class="desc">Fitur ada di kode <code>api/tick.js</code>; angka di bawah adalah berapa kali fitur itu tercatat bekerja di log.</p>
+      <div class="grid">
+        ${kpi("Idempotency", num(o.idemSkips), `panggilan kedua untuk candle sama dilewati (candle_sudah_diproses) · duplikat sinyal: ${o.duplicates}`)}
+        ${kpi("Candle belum tertutup dipakai", num(o.unclosedUsed), "harus 0", o.unclosedUsed ? "neg" : "pos")}
+        ${kpi("Daily loss limit aktif", num(o.dailyLimitHits), "batas hari 00.00 WIB")}
+        ${kpi("Kill switch", num(o.killUses), "flag storage / env KILL_SWITCH")}
+        ${kpi("Data tidak valid (dilewati)", num(o.invalidData))}
+        ${kpi("Retry terbatas", `${num(o.rawCalls)} panggilan / ${num(o.runs)} run`, "panggilan berjarak &lt;90 dtk dihitung 1 run (maks ${num(o.maxCallsPerRun)} per run di log)")}
+      </div></section>`);
 
-  $('calls').innerHTML = '<tr><th>Waktu</th><th>Status</th><th>Candle diproses</th><th>Lama (ms)</th></tr>' +
-    calls.slice().reverse().slice(0,40).map(c=>{
-      const bad=(c.errors||[]).length;
-      return '<tr><td>'+wib(c.t)+'</td><td><span class="tag '+(bad?'bad':'ok')+'">'+(bad?'error':'ok')+'</span></td><td>'+(c.processed||[]).length+'</td><td>'+(c.durationMs??'-')+'</td></tr>'; }).join('');
+    // ---------- Operasional ----------
+    const et = Object.entries(o.errTypes).map(([k, v]) => ({ k, v }));
+    S.push(`<section id="ops"><h2>Panel operasional</h2>
+      <p class="desc">Uptime = candle yang diproses sebelum candle berikutnya ditutup ÷ jumlah candle forward test (${o.totalCandles} candle 1 jam). Satu panggilan terjadwal per candle.</p>
+      <div class="grid">
+        ${kpi("Uptime sejauh ini", pct(o.uptimeSoFar, 1, false), `${o.onTimeCandles} / ${o.elapsedCandles} candle yang sudah lewat`, o.uptimeSoFar >= .95 ? "pos" : "neg")}
+        ${kpi("Uptime akhir bila bot tetap mati", pct(o.uptimeFinalIfStops, 1, false), `${o.onTimeCandles} / ${o.totalCandles} candle`, "neg")}
+        ${kpi("Terjadwal vs terlaksana", `${o.scheduledCalls} / ${o.runs}`, `${o.okRuns} run sukses`)}
+        ${kpi("Median keterlambatan proses", num(o.medianDelayMin, 0) + " mnt", "setelah candle ditutup")}
+        ${kpi("Jeda terpanjang", num(o.maxGapH, 1) + " jam", "antar run sukses")}
+        ${kpi("Durasi panggilan", `${num(o.medianDurationMs / 1000, 1)} dtk`, `maks ${num(o.maxDurationMs / 1000, 1)} dtk (batas 300 dtk)`)}
+      </div>
+      <h3>Error per jenis</h3>${table([{ h: "Jenis — pesan", l: 1, f: (r) => esc(r.k) }, { h: "Jumlah", f: (r) => num(r.v) }], et, '<span class="tag ok">tidak ada error</span>')}
+      <h3>Semua run selama forward test</h3>
+      ${table([{ h: "Waktu", l: 1, f: (r) => wib(r.t) }, { h: "Panggilan", f: (r) => r.calls }, { h: "Status", f: (r) => r.ok ? '<span class="tag ok">sukses</span>' : '<span class="tag bad">gagal</span>' }, { h: "Pasangan diproses", f: (r) => r.processed }, { h: "Error", l: 1, f: (r) => esc(r.err) }, { h: "Catatan", l: 1, f: (r) => esc(r.notes) }], o.runsTable)}
+    </section>`);
 
-  const orders = d.orders || [];
-  $('orders').innerHTML = orders.length
-    ? '<p>'+orders.length+' order simulasi tercatat.</p>'
-    : '<p>Belum ada order simulasi di log. Return, CAGR, maximum drawdown, profit factor, win rate, porsi biaya, dan benchmark buy and hold BTC/IDR dihitung dari hasil backtest dan log lewat skrip hitung_ulang, lalu ditambahkan ke halaman ini.</p>';
-}).catch(e=>{
-  const st=$('status'); st.className='banner bad'; st.innerHTML='<b>Data tidak bisa dimuat</b>'+esc(e.message);
-});
+    // ---------- Sinyal ----------
+    S.push(`<section id="sinyal"><h2>Log sinyal per candle</h2>
+      ${table([{ h: "Candle (buka)", l: 1, f: (r) => wib(r.candleOpen) }, { h: "Diproses", f: (r) => wib(r.processedAt) }, { h: "Pasangan", l: 1, f: (r) => r.pair }, { h: "Close", f: (r) => num(r.close) }, { h: "EMA cepat", f: (r) => num(r.fast) }, { h: "EMA lambat", f: (r) => num(r.slow) }, { h: "Fast − slow", f: (r) => `<span class="${cls(r.fast - r.slow)}">${pct(r.fast / r.slow - 1, 3)}</span>` }, { h: "Sinyal", f: (r) => r.signal }, { h: "Aksi", f: (r) => r.action }], [...M.signals].sort((a, b) => b.candleT - a.candleT || a.pair.localeCompare(b.pair)))}
+    </section>`);
+
+    // ---------- Refleksi ----------
+    const facts = [];
+    facts.push(`Bot memproses ${o.processedCandles} dari ${o.elapsedCandles} candle 1 jam yang sudah lewat (uptime ${pct(o.uptimeSoFar, 1, false)}); ${o.scheduledCalls} panggilan terjadwal, ${o.runs} run tercatat, ${o.okRuns} sukses.`);
+    if (o.okRuns) facts.push(`Saat masih berjalan, median keterlambatan proses ${num(o.medianDelayMin)} menit setelah candle ditutup, dan run sukses hanya terjadi rata-rata tiap ${num((Date.parse(o.lastOkRun) - Date.parse(M.config.FORWARD_START)) / 3.6e6 / Math.max(1, o.okRuns), 1)} jam — jauh dari jadwal tiap jam.`);
+    if (o.tickFails) facts.push(`Sejak ${wib(o.firstTickFail)} semua ${o.tickFails} panggilan gagal dengan "${esc(Object.keys(o.errTypes)[0])}" (jeda ${num(o.tailGapH, 1)} jam tanpa candle diproses).`);
+    facts.push(`Forward test: ${f.stats.n} trade, return ${pct(fe && fe.totalReturn)}, max drawdown ${pct(fe && fe.mdd)}; buy &amp; hold BTC/IDR pada periode data yang sama ${pct(fb && fb.ret)}.`);
+    if (o.unseenCross.length) facts.push(`${o.unseenCross.length} persilangan EMA terjadi di candle yang tidak dibaca bot (${o.unseenCross.map((x) => x.pair).join(", ")}), sehingga sinyal yang mungkin muncul di backtest tidak terlihat di forward test.`);
+    facts.push(`Median spread snapshot: ${M.spread.map((s) => `${s.pair} ${pct(s.median, 4, false)}`).join(", ")}; snapshot sebelum freeze: ${sumN(M.spread.map((s) => s.nPreFreeze))}.`);
+    if (g) facts.push(`Kecocokan sinyal backtest vs forward: ${pct(g.matchRate, 1, false)} dari ${g.candlesCompared} candle×pasangan; gap return ${pct(g.returnGap)}.`);
+    S.push(`<section id="refleksi" class="refl"><h2>Refleksi</h2>
+      <h3>Fakta otomatis dari log</h3><ul>${facts.map((x) => `<li>${x}</li>`).join("")}</ul>
+      <h3>Refleksi mahasiswa</h3>${I.refleksi.map((p) => `<p>${todo(p)}</p>`).join("")}
+    </section>`);
+
+    // ---------- Data mentah ----------
+    S.push(`<section id="data"><h2>Data mentah</h2>
+      <p class="desc">Log mentah persis seperti dari <code>/api/data</code>. Unduh untuk dikumpulkan dan untuk <code>node scripts/hitung_ulang.mjs data.json</code>.</p>
+      <button class="btn" data-dl="all">data.json (semua)</button>
+      ${["calls", "orders", "signals", "equity", "errors", "snapshots"].map((k) => `<button class="btn" data-dl="${k}">${k}.csv (${(data[k] || []).length})</button>`).join("")}
+      <button class="btn" data-dl="metrics">metrik_dashboard.json</button>
+    </section>`);
+
+    app.innerHTML = S.join("");
+    app.hidden = false;
+    document.getElementById("loading").hidden = true;
+    document.getElementById("foot").textContent = `Dihitung oleh metrics.js dari log mentah · data sampai ${wib(o.asOf)}`;
+    app.querySelectorAll("[data-dl]").forEach((btn) => btn.onclick = () => download(btn.dataset.dl, data, M));
+  }
+  function sumN(a) { return a.reduce((s, x) => s + x, 0); }
+
+  function toCSV(rows) {
+    if (!rows.length) return "";
+    const flat = rows.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, typeof v === "object" && v !== null ? JSON.stringify(v) : v])));
+    const cols = [...new Set(flat.flatMap(Object.keys))];
+    const q = (v) => v == null ? "" : /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v);
+    return [cols.join(","), ...flat.map((r) => cols.map((c) => q(r[c])).join(","))].join("\n");
+  }
+  function download(k, data, M) {
+    let name, body, type = "text/csv";
+    if (k === "all") { name = "data.json"; body = JSON.stringify(data, null, 1); type = "application/json"; }
+    else if (k === "metrics") { name = "metrik_dashboard.json"; body = JSON.stringify(M, null, 1); type = "application/json"; }
+    else { name = k + ".csv"; body = toCSV(data[k] || []); }
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([body], { type })); a.download = name; a.click();
+  }
+
+  async function boot() {
+    const emb = document.getElementById("raw-log"), embBt = document.getElementById("raw-backtest");
+    try {
+      if (emb) {
+        const bt = embBt ? JSON.parse(embBt.textContent) : null;
+        return render(JSON.parse(emb.textContent), bt, "log tertanam (dashboard offline)");
+      }
+      const r = await fetch("/api/data", { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const data = await r.json();
+      let bt = null;
+      try { const rb = await fetch("backtest.json", { cache: "no-store" }); if (rb.ok) bt = await rb.json(); } catch (e) {}
+      render(data, bt, "/api/data (live)");
+    } catch (e) {
+      document.getElementById("loading").innerHTML = `Gagal memuat log: ${esc(e.message)}.<br><br>Pilih file <code>data.json</code> secara manual: <input type="file" accept=".json" id="pick">`;
+      const p = document.getElementById("pick");
+      if (p) p.onchange = async () => render(JSON.parse(await p.files[0].text()), null, p.files[0].name);
+    }
+  }
+  boot();
+})();
 </script>
 </body>
 </html>
