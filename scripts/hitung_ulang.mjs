@@ -9,10 +9,10 @@
 // tombol "metrik_dashboard.json" di dashboard: angkanya harus sama).
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-await import(path.join(here, "..", "public", "metrics.js"));
+await import(pathToFileURL(path.join(here, "..", "public", "metrics.js")).href);
 const { compute } = globalThis.UASMetrics;
 
 const src = process.argv[2] || "data.json";

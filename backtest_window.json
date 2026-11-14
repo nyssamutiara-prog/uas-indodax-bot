@@ -1,0 +1,6220 @@
+{
+ "result": {
+  "window": {
+   "from": 1793768400,
+   "to": 1794632400,
+   "days": 10
+  },
+  "params": {
+   "STRATEGY_VERSION": "ema-cross-1h-v1",
+   "PAIRS": [
+    "btcidr",
+    "ethidr",
+    "bnbidr"
+   ],
+   "TF": 60,
+   "TF_SEC": 3600,
+   "EMA_FAST": 9,
+   "EMA_SLOW": 21,
+   "WARMUP_BARS": 500,
+   "INITIAL_CAPITAL": 100000000,
+   "POS_FRAC": 0.1,
+   "MAX_POSITIONS": 3,
+   "DAILY_LOSS_LIMIT": 0.03,
+   "MIN_ORDER_IDR": 25000,
+   "MAX_SPREAD": 0.02,
+   "FEE_TAKER": 0.0051,
+   "BT_SPREAD": 0.002,
+   "BT_SLIPPAGE": 0.0005,
+   "FORWARD_START": "2026-11-04T05:00:00Z",
+   "FORWARD_END": "2026-11-14T05:00:00Z"
+  },
+  "return_total_pct": -2.4129518754263724,
+  "cagr_pct": null,
+  "max_drawdown_pct": -3.388608238893387,
+  "trades": 16,
+  "win_rate_pct": 12.5,
+  "profit_factor": 0.02372254066193992,
+  "avg_win": 29316.127517128363,
+  "avg_loss": -176541.72360432774,
+  "cost_share_of_gross_profit": null,
+  "fee_total": 1605848.803341361,
+  "spread_slippage_total": 472307.7182814107,
+  "buy_hold_btc_pct": -12.695518255237326
+ },
+ "trades": [
+  {
+   "pair": "bnbidr",
+   "entryT": 1793782800,
+   "exitT": 1793883600,
+   "qty": 0.7786329,
+   "entry": 12780132.486499999,
+   "exit": 12765797.537500001,
+   "pnl": -112605.26095791906
+  },
+  {
+   "pair": "btcidr",
+   "entryT": 1793775600,
+   "exitT": 1793887200,
+   "qty": 0.00704119,
+   "entry": 1413006334.9999998,
+   "exit": 1432662777.5,
+   "pnl": 36216.57218553312
+  },
+  {
+   "pair": "ethidr",
+   "entryT": 1793775600,
+   "exitT": 1793890800,
+   "qty": 0.23839533,
+   "entry": 41706465.99999999,
+   "exit": 42228562,
+   "pnl": 22415.682848723605
+  },
+  {
+   "pair": "ethidr",
+   "entryT": 1794063600,
+   "exitT": 1794067200,
+   "qty": 0.24465897,
+   "entry": 40643874.49999999,
+   "exit": 40313439,
+   "pnl": -181859.3670493085
+  },
+  {
+   "pair": "bnbidr",
+   "entryT": 1794092400,
+   "exitT": 1794103200,
+   "qty": 0.79135578,
+   "entry": 12542771.978999998,
+   "exit": 12504985.343500001,
+   "pnl": -130993.27882898413
+  },
+  {
+   "pair": "bnbidr",
+   "entryT": 1794106800,
+   "exitT": 1794110400,
+   "qty": 0.78689162,
+   "entry": 12597366.748499999,
+   "exit": 12559631.251500001,
+   "pnl": -130652.48400967382
+  },
+  {
+   "pair": "ethidr",
+   "entryT": 1794150000,
+   "exitT": 1794157200,
+   "qty": 0.24370593,
+   "entry": 40563754.49999999,
+   "exit": 40189625,
+   "pnl": -191545.97274155356
+  },
+  {
+   "pair": "btcidr",
+   "entryT": 1794142800,
+   "exitT": 1794171600,
+   "qty": 0.00720267,
+   "entry": 1374264308.9999998,
+   "exit": 1367005411.5,
+   "pnl": -152980.19526286982
+  },
+  {
+   "pair": "bnbidr",
+   "entryT": 1794121200,
+   "exitT": 1794175200,
+   "qty": 0.78577253,
+   "entry": 12598764.842499997,
+   "exit": 12395268.1665,
+   "pnl": -260064.18316427432
+  },
+  {
+   "pair": "btcidr",
+   "entryT": 1794265200,
+   "exitT": 1794283200,
+   "qty": 0.00722147,
+   "entry": 1362547760.4999998,
+   "exit": 1342235622,
+   "pnl": -246299.3102850262
+  },
+  {
+   "pair": "bnbidr",
+   "entryT": 1794272400,
+   "exitT": 1794319200,
+   "qty": 0.78513827,
+   "entry": 12518738.983499998,
+   "exit": 12376294.6695,
+   "pnl": -211523.30490022525
+  },
+  {
+   "pair": "bnbidr",
+   "entryT": 1794376800,
+   "exitT": 1794380400,
+   "qty": 0.79291605,
+   "entry": 12351952.177999998,
+   "exit": 12283099.672,
+   "pnl": -154215.24991280027
+  },
+  {
+   "pair": "bnbidr",
+   "entryT": 1794384000,
+   "exitT": 1794405600,
+   "qty": 0.79019797,
+   "entry": 12375022.731999997,
+   "exit": 12359628.706,
+   "pnl": -111845.2120056469
+  },
+  {
+   "pair": "ethidr",
+   "entryT": 1794416400,
+   "exitT": 1794448800,
+   "qty": 0.25834814,
+   "entry": 37763560.49999999,
+   "exit": 37167165.5,
+   "pnl": -252804.42877914011
+  },
+  {
+   "pair": "bnbidr",
+   "entryT": 1794412800,
+   "exitT": 1794456000,
+   "qty": 0.78216225,
+   "entry": 12478590.851499997,
+   "exit": 12374784.9375,
+   "pnl": -180333.8661263641
+  },
+  {
+   "pair": "btcidr",
+   "entryT": 1794394800,
+   "exitT": 1794463200,
+   "qty": 0.00726379,
+   "entry": 1345420107.4999998,
+   "exit": 1337923100.5,
+   "pnl": -153862.01643680222
+  }
+ ],
+ "signals": [
+  {
+   "pair": "btcidr",
+   "candleT": 1793768400,
+   "close": 1407733000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793768400,
+   "close": 41513000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793768400,
+   "close": 12674999,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793772000,
+   "close": 1412158000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793772000,
+   "close": 41687000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793772000,
+   "close": 12685000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793775600,
+   "close": 1413159000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793775600,
+   "close": 41735000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793775600,
+   "close": 12760998,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793779200,
+   "close": 1422039000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793779200,
+   "close": 42024000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793779200,
+   "close": 12760999,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793782800,
+   "close": 1419001000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793782800,
+   "close": 42023000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793782800,
+   "close": 12747529,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793786400,
+   "close": 1422041000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793786400,
+   "close": 42117000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793786400,
+   "close": 12750634,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793790000,
+   "close": 1422999000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793790000,
+   "close": 42201000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793790000,
+   "close": 12750632,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793793600,
+   "close": 1417499000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793793600,
+   "close": 41956000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793793600,
+   "close": 12718450,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793797200,
+   "close": 1419797000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793797200,
+   "close": 41962000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793797200,
+   "close": 12719777,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793800800,
+   "close": 1435016000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793800800,
+   "close": 43068000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793800800,
+   "close": 12889000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793804400,
+   "close": 1454363000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793804400,
+   "close": 43842000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793804400,
+   "close": 12917011,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793808000,
+   "close": 1458763000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793808000,
+   "close": 44113000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793808000,
+   "close": 13051419,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793811600,
+   "close": 1454859000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793811600,
+   "close": 43935000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793811600,
+   "close": 12966259,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793815200,
+   "close": 1454688000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793815200,
+   "close": 43881000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793815200,
+   "close": 12966424,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793818800,
+   "close": 1450710000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793818800,
+   "close": 43607000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793818800,
+   "close": 12966424,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793822400,
+   "close": 1450522000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793822400,
+   "close": 43803000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793822400,
+   "close": 13002727,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793826000,
+   "close": 1453655000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793826000,
+   "close": 43793000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793826000,
+   "close": 13019395,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793829600,
+   "close": 1464329000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793829600,
+   "close": 44117000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793829600,
+   "close": 13110300,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793833200,
+   "close": 1459803000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793833200,
+   "close": 43876000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793833200,
+   "close": 13092497,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793836800,
+   "close": 1460278000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793836800,
+   "close": 43828000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793836800,
+   "close": 13092503,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793840400,
+   "close": 1463418000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793840400,
+   "close": 44000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793840400,
+   "close": 12960853,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793844000,
+   "close": 1460418000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793844000,
+   "close": 43997000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793844000,
+   "close": 12962019,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793847600,
+   "close": 1460150000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793847600,
+   "close": 43937000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793847600,
+   "close": 13025972,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793851200,
+   "close": 1458002000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793851200,
+   "close": 43950000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793851200,
+   "close": 12994371,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793854800,
+   "close": 1454347000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793854800,
+   "close": 43776000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793854800,
+   "close": 12922612,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793858400,
+   "close": 1456905000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793858400,
+   "close": 43930000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793858400,
+   "close": 12940537,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793862000,
+   "close": 1453000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793862000,
+   "close": 43644000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793862000,
+   "close": 12872079,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793865600,
+   "close": 1453591000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793865600,
+   "close": 43685000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793865600,
+   "close": 12872586,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793869200,
+   "close": 1451099000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793869200,
+   "close": 43639000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793869200,
+   "close": 12935497,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793872800,
+   "close": 1450523000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793872800,
+   "close": 43654000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793872800,
+   "close": 12873525,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793876400,
+   "close": 1448500000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793876400,
+   "close": 43600000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793876400,
+   "close": 12886006,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793880000,
+   "close": 1435000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793880000,
+   "close": 43099000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793880000,
+   "close": 12784958,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793883600,
+   "close": 1434815000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793883600,
+   "close": 43000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793883600,
+   "close": 12846050,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793887200,
+   "close": 1415406000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793887200,
+   "close": 42292000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793887200,
+   "close": 12650052,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793890800,
+   "close": 1380017000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793890800,
+   "close": 40826000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793890800,
+   "close": 12440024,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793894400,
+   "close": 1386704000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793894400,
+   "close": 41041000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793894400,
+   "close": 12609645,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793898000,
+   "close": 1378474000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793898000,
+   "close": 40866000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793898000,
+   "close": 12581818,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793901600,
+   "close": 1379161000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793901600,
+   "close": 40746000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793901600,
+   "close": 12581844,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793905200,
+   "close": 1384502000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793905200,
+   "close": 40992000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793905200,
+   "close": 12581862,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793908800,
+   "close": 1381584000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793908800,
+   "close": 40716000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793908800,
+   "close": 12520028,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793912400,
+   "close": 1376873000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793912400,
+   "close": 40426000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793912400,
+   "close": 12510045,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793916000,
+   "close": 1372487000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793916000,
+   "close": 40469000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793916000,
+   "close": 12451270,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793919600,
+   "close": 1380511000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793919600,
+   "close": 40537000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793919600,
+   "close": 12524829,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793923200,
+   "close": 1385000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793923200,
+   "close": 40718000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793923200,
+   "close": 12611111,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793926800,
+   "close": 1381298000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793926800,
+   "close": 40622000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793926800,
+   "close": 12614185,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793930400,
+   "close": 1381296000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793930400,
+   "close": 40699000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793930400,
+   "close": 12561759,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793934000,
+   "close": 1376555000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793934000,
+   "close": 40481000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793934000,
+   "close": 12561584,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793937600,
+   "close": 1374170000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793937600,
+   "close": 40468000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793937600,
+   "close": 12548679,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793941200,
+   "close": 1375105000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793941200,
+   "close": 40440000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793941200,
+   "close": 12538005,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793944800,
+   "close": 1374376000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793944800,
+   "close": 40512000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793944800,
+   "close": 12561310,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793948400,
+   "close": 1370000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793948400,
+   "close": 40465000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793948400,
+   "close": 12544765,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793952000,
+   "close": 1369999000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793952000,
+   "close": 40328000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793952000,
+   "close": 12549360,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793955600,
+   "close": 1378000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793955600,
+   "close": 40516000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793955600,
+   "close": 12597003,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793959200,
+   "close": 1377574000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793959200,
+   "close": 40523000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793959200,
+   "close": 12597234,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793962800,
+   "close": 1375031000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793962800,
+   "close": 40500000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793962800,
+   "close": 12597208,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793966400,
+   "close": 1376001000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793966400,
+   "close": 40485000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793966400,
+   "close": 12614187,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793970000,
+   "close": 1372326000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793970000,
+   "close": 40380000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793970000,
+   "close": 12607894,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793973600,
+   "close": 1365391000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793973600,
+   "close": 40274000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793973600,
+   "close": 12654730,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793977200,
+   "close": 1369178000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793977200,
+   "close": 40354000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793977200,
+   "close": 12525797,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793980800,
+   "close": 1370936000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793980800,
+   "close": 40432000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793980800,
+   "close": 12526755,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793984400,
+   "close": 1366025000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793984400,
+   "close": 40253000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793984400,
+   "close": 12596682,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793988000,
+   "close": 1368204000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793988000,
+   "close": 40350000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793988000,
+   "close": 12597074,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793991600,
+   "close": 1370992000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793991600,
+   "close": 40350000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793991600,
+   "close": 12538105,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793995200,
+   "close": 1373208000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793995200,
+   "close": 40331000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793995200,
+   "close": 12596550,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1793998800,
+   "close": 1373159000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1793998800,
+   "close": 40486000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1793998800,
+   "close": 12537032,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794002400,
+   "close": 1372969000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794002400,
+   "close": 40491000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794002400,
+   "close": 12569811,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794006000,
+   "close": 1372970000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794006000,
+   "close": 40476000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794006000,
+   "close": 12563000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794009600,
+   "close": 1372969000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794009600,
+   "close": 40544000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794009600,
+   "close": 12563000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794013200,
+   "close": 1373870000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794013200,
+   "close": 40545000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794013200,
+   "close": 12595887,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794016800,
+   "close": 1373871000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794016800,
+   "close": 40584000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794016800,
+   "close": 12595886,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794020400,
+   "close": 1371851000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794020400,
+   "close": 40571000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794020400,
+   "close": 12551353,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794024000,
+   "close": 1371256000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794024000,
+   "close": 40505000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794024000,
+   "close": 12569007,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794027600,
+   "close": 1373873000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794027600,
+   "close": 40636000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794027600,
+   "close": 12575792,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794031200,
+   "close": 1373877000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794031200,
+   "close": 40581000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794031200,
+   "close": 12578605,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794034800,
+   "close": 1373876000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794034800,
+   "close": 40588000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794034800,
+   "close": 12517080,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794038400,
+   "close": 1376596000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794038400,
+   "close": 40580000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794038400,
+   "close": 12578605,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794042000,
+   "close": 1374287000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794042000,
+   "close": 40579000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794042000,
+   "close": 12578603,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794045600,
+   "close": 1373670000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794045600,
+   "close": 40546000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794045600,
+   "close": 12519772,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794049200,
+   "close": 1373394000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794049200,
+   "close": 40617000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794049200,
+   "close": 12520018,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794052800,
+   "close": 1372746000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794052800,
+   "close": 40549000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794052800,
+   "close": 12519368,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794056400,
+   "close": 1372743000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794056400,
+   "close": 40605000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794056400,
+   "close": 12519558,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794060000,
+   "close": 1372877000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794060000,
+   "close": 40583000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794060000,
+   "close": 12578598,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794063600,
+   "close": 1369597000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794063600,
+   "close": 40425000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794063600,
+   "close": 12578600,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794067200,
+   "close": 1369364000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794067200,
+   "close": 40370000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794067200,
+   "close": 12519522,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794070800,
+   "close": 1370292000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794070800,
+   "close": 40367000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794070800,
+   "close": 12572333,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794074400,
+   "close": 1370824000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794074400,
+   "close": 40390000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794074400,
+   "close": 12521520,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794078000,
+   "close": 1370180000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794078000,
+   "close": 40390000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794078000,
+   "close": 12522705,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794081600,
+   "close": 1367658000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794081600,
+   "close": 40277000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794081600,
+   "close": 12578599,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794085200,
+   "close": 1368300000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794085200,
+   "close": 40285000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794085200,
+   "close": 12578600,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794088800,
+   "close": 1368562000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794088800,
+   "close": 40342000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794088800,
+   "close": 12578598,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794092400,
+   "close": 1370006000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794092400,
+   "close": 40394000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794092400,
+   "close": 12578599,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794096000,
+   "close": 1368398000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794096000,
+   "close": 40394000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794096000,
+   "close": 12578593,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794099600,
+   "close": 1369991000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794099600,
+   "close": 40300000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794099600,
+   "close": 12526943,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794103200,
+   "close": 1367767000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794103200,
+   "close": 40332000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794103200,
+   "close": 12578499,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794106800,
+   "close": 1369989000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794106800,
+   "close": 40389000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794106800,
+   "close": 12526126,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794110400,
+   "close": 1368265000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794110400,
+   "close": 40316000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794110400,
+   "close": 12527418,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794114000,
+   "close": 1369336000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794114000,
+   "close": 40368000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794114000,
+   "close": 12578399,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794117600,
+   "close": 1369337000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794117600,
+   "close": 40368000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794117600,
+   "close": 12578606,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794121200,
+   "close": 1371891000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794121200,
+   "close": 40487000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794121200,
+   "close": 12600628,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794124800,
+   "close": 1370759000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794124800,
+   "close": 40399000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794124800,
+   "close": 12668239,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794128400,
+   "close": 1370087000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794128400,
+   "close": 40402000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794128400,
+   "close": 12667824,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794132000,
+   "close": 1370087000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794132000,
+   "close": 40385000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794132000,
+   "close": 12658462,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794135600,
+   "close": 1371800000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794135600,
+   "close": 40414000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794135600,
+   "close": 12572681,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794139200,
+   "close": 1371800000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794139200,
+   "close": 40421000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794139200,
+   "close": 12658031,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794142800,
+   "close": 1370667000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794142800,
+   "close": 40414000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794142800,
+   "close": 12602281,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794146400,
+   "close": 1374199000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794146400,
+   "close": 40503000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794146400,
+   "close": 12572216,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794150000,
+   "close": 1373538000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794150000,
+   "close": 40497000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794150000,
+   "close": 12628493,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794153600,
+   "close": 1370001000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794153600,
+   "close": 40250000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794153600,
+   "close": 12628429,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794157200,
+   "close": 1370003000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794157200,
+   "close": 40279000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794157200,
+   "close": 12628491,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794160800,
+   "close": 1372252000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794160800,
+   "close": 40354000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794160800,
+   "close": 12573578,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794164400,
+   "close": 1370127000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794164400,
+   "close": 40351000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794164400,
+   "close": 12628491,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794168000,
+   "close": 1369319000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794168000,
+   "close": 40262000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794168000,
+   "close": 12575464,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794171600,
+   "close": 1340555000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794171600,
+   "close": 38442000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794171600,
+   "close": 12311480,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794175200,
+   "close": 1348000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794175200,
+   "close": 38492000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794175200,
+   "close": 12441174,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794178800,
+   "close": 1351998000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794178800,
+   "close": 38488000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794178800,
+   "close": 12431424,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794182400,
+   "close": 1361146000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794182400,
+   "close": 38793000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794182400,
+   "close": 12459914,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794186000,
+   "close": 1360600000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794186000,
+   "close": 38832000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794186000,
+   "close": 12459928,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794189600,
+   "close": 1360000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794189600,
+   "close": 38836000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794189600,
+   "close": 12524325,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794193200,
+   "close": 1355001000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794193200,
+   "close": 38706000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794193200,
+   "close": 12403989,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794196800,
+   "close": 1353446000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794196800,
+   "close": 38563000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794196800,
+   "close": 12474818,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794200400,
+   "close": 1345602000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794200400,
+   "close": 38487000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794200400,
+   "close": 12366922,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794204000,
+   "close": 1343000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794204000,
+   "close": 38189000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794204000,
+   "close": 12285053,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794207600,
+   "close": 1335589000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794207600,
+   "close": 37827000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794207600,
+   "close": 12205329,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794211200,
+   "close": 1348310000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794211200,
+   "close": 38424000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794211200,
+   "close": 12366315,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794214800,
+   "close": 1340836000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794214800,
+   "close": 38084000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794214800,
+   "close": 12366389,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794218400,
+   "close": 1340598000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794218400,
+   "close": 38126000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794218400,
+   "close": 12305826,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794222000,
+   "close": 1345721000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794222000,
+   "close": 38201000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794222000,
+   "close": 12424720,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794225600,
+   "close": 1353838000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794225600,
+   "close": 38399000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794225600,
+   "close": 12441824,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794229200,
+   "close": 1351273000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794229200,
+   "close": 38407000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794229200,
+   "close": 12431467,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794232800,
+   "close": 1352963000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794232800,
+   "close": 38467000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794232800,
+   "close": 12359984,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794236400,
+   "close": 1364630000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794236400,
+   "close": 38814000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794236400,
+   "close": 12497485,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794240000,
+   "close": 1356965000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794240000,
+   "close": 38595000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794240000,
+   "close": 12462259,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794243600,
+   "close": 1349998000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794243600,
+   "close": 38338000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794243600,
+   "close": 12393716,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794247200,
+   "close": 1345999000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794247200,
+   "close": 38384000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794247200,
+   "close": 12424060,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794250800,
+   "close": 1352356000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794250800,
+   "close": 38424000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794250800,
+   "close": 12382442,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794254400,
+   "close": 1351668000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794254400,
+   "close": 38485000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794254400,
+   "close": 12402495,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794258000,
+   "close": 1355000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794258000,
+   "close": 38517000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794258000,
+   "close": 12404413,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794261600,
+   "close": 1360909000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794261600,
+   "close": 38588000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794261600,
+   "close": 12499997,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794265200,
+   "close": 1359576000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794265200,
+   "close": 38595000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794265200,
+   "close": 12404860,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794268800,
+   "close": 1356002000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794268800,
+   "close": 38397000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794268800,
+   "close": 12499281,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794272400,
+   "close": 1355616000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794272400,
+   "close": 38396000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794272400,
+   "close": 12422443,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794276000,
+   "close": 1350000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794276000,
+   "close": 38256000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794276000,
+   "close": 12464269,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794279600,
+   "close": 1344252000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794279600,
+   "close": 38121000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794279600,
+   "close": 12422848,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794283200,
+   "close": 1349000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794283200,
+   "close": 38272000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794283200,
+   "close": 12474991,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794286800,
+   "close": 1348977000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794286800,
+   "close": 38367000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794286800,
+   "close": 12405426,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794290400,
+   "close": 1345700000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794290400,
+   "close": 38154000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794290400,
+   "close": 12474180,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794294000,
+   "close": 1352104000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794294000,
+   "close": 38287000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794294000,
+   "close": 12480883,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794297600,
+   "close": 1351502000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794297600,
+   "close": 38221000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794297600,
+   "close": 12426751,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794301200,
+   "close": 1345666000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794301200,
+   "close": 37984000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794301200,
+   "close": 12421585,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794304800,
+   "close": 1339751000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794304800,
+   "close": 37745000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794304800,
+   "close": 12473041,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794308400,
+   "close": 1342416000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794308400,
+   "close": 37819000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794308400,
+   "close": 12399972,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794312000,
+   "close": 1339463000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794312000,
+   "close": 37763000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794312000,
+   "close": 12454390,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794315600,
+   "close": 1332854000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794315600,
+   "close": 37354000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794315600,
+   "close": 12394887,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794319200,
+   "close": 1342420000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794319200,
+   "close": 37616000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794319200,
+   "close": 12459908,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794322800,
+   "close": 1325446000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794322800,
+   "close": 36624000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794322800,
+   "close": 12292662,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794326400,
+   "close": 1318456000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794326400,
+   "close": 36500000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794326400,
+   "close": 12112703,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794330000,
+   "close": 1323953000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794330000,
+   "close": 36768000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794330000,
+   "close": 12116864,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794333600,
+   "close": 1330923000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794333600,
+   "close": 37054000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794333600,
+   "close": 12206721,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794337200,
+   "close": 1330159000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794337200,
+   "close": 37048000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794337200,
+   "close": 12151794,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794340800,
+   "close": 1334000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794340800,
+   "close": 37229000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794340800,
+   "close": 12257084,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794344400,
+   "close": 1334725000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794344400,
+   "close": 37201000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794344400,
+   "close": 12279939,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794348000,
+   "close": 1332654000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794348000,
+   "close": 37005000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794348000,
+   "close": 12204279,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794351600,
+   "close": 1332654000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794351600,
+   "close": 37100000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794351600,
+   "close": 12317445,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794355200,
+   "close": 1329683000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794355200,
+   "close": 37080000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794355200,
+   "close": 12258789,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794358800,
+   "close": 1331956000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794358800,
+   "close": 37150000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794358800,
+   "close": 12378357,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794362400,
+   "close": 1332669000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794362400,
+   "close": 37255000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794362400,
+   "close": 12358110,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794366000,
+   "close": 1334113000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794366000,
+   "close": 37280000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794366000,
+   "close": 12378196,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794369600,
+   "close": 1335127000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794369600,
+   "close": 37362000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794369600,
+   "close": 12377678,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794373200,
+   "close": 1339730000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794373200,
+   "close": 37520000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794373200,
+   "close": 12377850,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794376800,
+   "close": 1334566000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794376800,
+   "close": 37214000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794376800,
+   "close": 12300000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794380400,
+   "close": 1340768000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794380400,
+   "close": 37417000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794380400,
+   "close": 12347109,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794384000,
+   "close": 1335058000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794384000,
+   "close": 37293000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794384000,
+   "close": 12353834,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794387600,
+   "close": 1337514000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794387600,
+   "close": 37269000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794387600,
+   "close": 12355742,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794391200,
+   "close": 1343284000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794391200,
+   "close": 37379000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794391200,
+   "close": 12375977,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794394800,
+   "close": 1341992000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794394800,
+   "close": 37319000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794394800,
+   "close": 12317951,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794398400,
+   "close": 1340666000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794398400,
+   "close": 37248000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794398400,
+   "close": 12311165,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794402000,
+   "close": 1337854000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794402000,
+   "close": 37250000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794402000,
+   "close": 12311091,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794405600,
+   "close": 1335218000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794405600,
+   "close": 37295000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794405600,
+   "close": 12317665,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794409200,
+   "close": 1343514000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794409200,
+   "close": 37645000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794409200,
+   "close": 12382027,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794412800,
+   "close": 1348000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794412800,
+   "close": 37710000,
+   "signal": "BUY",
+   "action": "OPEN"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794412800,
+   "close": 12459909,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794416400,
+   "close": 1352609000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794416400,
+   "close": 37928000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794416400,
+   "close": 12443285,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794420000,
+   "close": 1351601000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794420000,
+   "close": 37801000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794420000,
+   "close": 12491002,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794423600,
+   "close": 1350299000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794423600,
+   "close": 37760000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794423600,
+   "close": 12490894,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794427200,
+   "close": 1355000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794427200,
+   "close": 37806000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794427200,
+   "close": 12484763,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794430800,
+   "close": 1351584000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794430800,
+   "close": 37650000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794430800,
+   "close": 12460000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794434400,
+   "close": 1341343000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794434400,
+   "close": 37360000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794434400,
+   "close": 12442637,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794438000,
+   "close": 1344497000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794438000,
+   "close": 37333000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794438000,
+   "close": 12356250,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794441600,
+   "close": 1344500000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794441600,
+   "close": 37459000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794441600,
+   "close": 12404262,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794445200,
+   "close": 1337994000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794445200,
+   "close": 37223000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794445200,
+   "close": 12300009,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794448800,
+   "close": 1343651000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794448800,
+   "close": 37439000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794448800,
+   "close": 12393380,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794452400,
+   "close": 1341617000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794452400,
+   "close": 37366000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794452400,
+   "close": 12300028,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794456000,
+   "close": 1341617000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794456000,
+   "close": 37309000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794456000,
+   "close": 12393267,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794459600,
+   "close": 1340615000,
+   "signal": "SELL",
+   "action": "CLOSE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794459600,
+   "close": 37281000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794459600,
+   "close": 12297873,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794463200,
+   "close": 1338223000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794463200,
+   "close": 37216000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794463200,
+   "close": 12296710,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794466800,
+   "close": 1340770000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794466800,
+   "close": 37339000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794466800,
+   "close": 12296724,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794470400,
+   "close": 1341314000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794470400,
+   "close": 37330000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794470400,
+   "close": 12260002,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794474000,
+   "close": 1339688000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794474000,
+   "close": 37309000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794474000,
+   "close": 12207549,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794477600,
+   "close": 1340611000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794477600,
+   "close": 37339000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794477600,
+   "close": 12286064,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794481200,
+   "close": 1330590000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794481200,
+   "close": 36867000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794481200,
+   "close": 12100017,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794484800,
+   "close": 1330775000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794484800,
+   "close": 36899000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794484800,
+   "close": 12021148,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794488400,
+   "close": 1326500000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794488400,
+   "close": 36755000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794488400,
+   "close": 11946975,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794492000,
+   "close": 1308893000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794492000,
+   "close": 36675000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794492000,
+   "close": 11981105,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794495600,
+   "close": 1307749000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794495600,
+   "close": 36647000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794495600,
+   "close": 11949569,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794499200,
+   "close": 1312255000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794499200,
+   "close": 36708000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794499200,
+   "close": 11948880,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794502800,
+   "close": 1313407000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794502800,
+   "close": 36911000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794502800,
+   "close": 11949391,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794506400,
+   "close": 1310626000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794506400,
+   "close": 36925000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794506400,
+   "close": 12034101,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794510000,
+   "close": 1310708000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794510000,
+   "close": 36821000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794510000,
+   "close": 11906971,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794513600,
+   "close": 1306117000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794513600,
+   "close": 36804000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794513600,
+   "close": 11989611,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794517200,
+   "close": 1308973000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794517200,
+   "close": 36927000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794517200,
+   "close": 11989664,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794520800,
+   "close": 1306605000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794520800,
+   "close": 36816000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794520800,
+   "close": 11967547,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794524400,
+   "close": 1305940000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794524400,
+   "close": 36883000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794524400,
+   "close": 11925211,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794528000,
+   "close": 1297702000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794528000,
+   "close": 36688000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794528000,
+   "close": 11998707,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794531600,
+   "close": 1293516000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794531600,
+   "close": 36693000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794531600,
+   "close": 11989074,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794535200,
+   "close": 1286772000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794535200,
+   "close": 36648000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794535200,
+   "close": 11901563,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794538800,
+   "close": 1268000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794538800,
+   "close": 35443000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794538800,
+   "close": 11527946,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794542400,
+   "close": 1261723000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794542400,
+   "close": 35408000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794542400,
+   "close": 11600000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794546000,
+   "close": 1249502000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794546000,
+   "close": 35061000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794546000,
+   "close": 11500413,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794549600,
+   "close": 1266052000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794549600,
+   "close": 35500000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794549600,
+   "close": 11616362,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794553200,
+   "close": 1257512000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794553200,
+   "close": 35480000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794553200,
+   "close": 11557381,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794556800,
+   "close": 1254835000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794556800,
+   "close": 35276000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794556800,
+   "close": 11563054,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794560400,
+   "close": 1262240000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794560400,
+   "close": 35487000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794560400,
+   "close": 11647520,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794564000,
+   "close": 1265071000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794564000,
+   "close": 35588000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794564000,
+   "close": 11604789,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794567600,
+   "close": 1269008000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794567600,
+   "close": 35858000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794567600,
+   "close": 11739656,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794571200,
+   "close": 1265320000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794571200,
+   "close": 35775000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794571200,
+   "close": 11739665,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794574800,
+   "close": 1270000000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794574800,
+   "close": 35966000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794574800,
+   "close": 11785929,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794578400,
+   "close": 1259561000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794578400,
+   "close": 35621000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794578400,
+   "close": 11626614,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794582000,
+   "close": 1255340000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794582000,
+   "close": 35279000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794582000,
+   "close": 11599135,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794585600,
+   "close": 1253999000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794585600,
+   "close": 35217000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794585600,
+   "close": 11589283,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794589200,
+   "close": 1259070000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794589200,
+   "close": 35364000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794589200,
+   "close": 11588394,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794592800,
+   "close": 1259079000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794592800,
+   "close": 35468000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794592800,
+   "close": 11637212,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794596400,
+   "close": 1260636000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794596400,
+   "close": 35629000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794596400,
+   "close": 11677101,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794600000,
+   "close": 1258821000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794600000,
+   "close": 35589000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794600000,
+   "close": 11683052,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794603600,
+   "close": 1249999000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794603600,
+   "close": 35225000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794603600,
+   "close": 11550670,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794607200,
+   "close": 1248244000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794607200,
+   "close": 35206000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794607200,
+   "close": 11494247,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794610800,
+   "close": 1248637000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794610800,
+   "close": 35254000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794610800,
+   "close": 11470135,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794614400,
+   "close": 1248640000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794614400,
+   "close": 35315000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794614400,
+   "close": 11559883,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794618000,
+   "close": 1248401000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794618000,
+   "close": 35186000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794618000,
+   "close": 11560403,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794621600,
+   "close": 1237979000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794621600,
+   "close": 34951000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794621600,
+   "close": 11496902,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794625200,
+   "close": 1229999000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794625200,
+   "close": 34530000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794625200,
+   "close": 11319904,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794628800,
+   "close": 1226017000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794628800,
+   "close": 34837000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794628800,
+   "close": 11256212,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "btcidr",
+   "candleT": 1794632400,
+   "close": 1229014000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "ethidr",
+   "candleT": 1794632400,
+   "close": 34844000,
+   "signal": "HOLD",
+   "action": "NONE"
+  },
+  {
+   "pair": "bnbidr",
+   "candleT": 1794632400,
+   "close": 11383065,
+   "signal": "HOLD",
+   "action": "NONE"
+  }
+ ],
+ "equity": [
+  [
+   1793768400,
+   100000000
+  ],
+  [
+   1793772000,
+   100000000
+  ],
+  [
+   1793775600,
+   99886529.01421498
+  ],
+  [
+   1793779200,
+   100017819.6097674
+  ],
+  [
+   1793782800,
+   99910149.65476748
+  ],
+  [
+   1793786400,
+   99956335.4565082
+  ],
+  [
+   1793790000,
+   99983077.79787193
+  ],
+  [
+   1793793600,
+   99861008.62439898
+  ],
+  [
+   1793797200,
+   99879634.25258482
+  ],
+  [
+   1793800800,
+   100381719.36571068
+  ],
+  [
+   1793804400,
+   100723930.98604807
+  ],
+  [
+   1793808000,
+   100923971.60644001
+  ],
+  [
+   1793811600,
+   100787876.28572828
+  ],
+  [
+   1793815200,
+   100773941.31776366
+  ],
+  [
+   1793818800,
+   100680704.4736979
+  ],
+  [
+   1793822400,
+   100754299.25637548
+  ],
+  [
+   1793826000,
+   100786920.95017453
+  ],
+  [
+   1793829600,
+   101009877.14355627
+  ],
+  [
+   1793833200,
+   100906796.62526956
+  ],
+  [
+   1793836800,
+   100898710.98021576
+  ],
+  [
+   1793840400,
+   100859356.68597868
+  ],
+  [
+   1793844000,
+   100838446.7468201
+  ],
+  [
+   1793847600,
+   100872018.29280268
+  ],
+  [
+   1793851200,
+   100835424.00861487
+  ],
+  [
+   1793854800,
+   100712456.84372891
+  ],
+  [
+   1793858400,
+   100781069.40206185
+  ],
+  [
+   1793862000,
+   100632237.82022604
+  ],
+  [
+   1793865600,
+   100646553.80860764
+  ],
+  [
+   1793869200,
+   100667005.08057582
+  ],
+  [
+   1793872800,
+   100618320.5802406
+  ],
+  [
+   1793876400,
+   100600938.42183346
+  ],
+  [
+   1793880000,
+   100308060.17064688
+  ],
+  [
+   1793883600,
+   100227523.80224396
+  ],
+  [
+   1793887200,
+   100002410.27078892
+  ],
+  [
+   1793890800,
+   99946026.99407633
+  ],
+  [
+   1793894400,
+   99946026.99407633
+  ],
+  [
+   1793898000,
+   99946026.99407633
+  ],
+  [
+   1793901600,
+   99946026.99407633
+  ],
+  [
+   1793905200,
+   99946026.99407633
+  ],
+  [
+   1793908800,
+   99946026.99407633
+  ],
+  [
+   1793912400,
+   99946026.99407633
+  ],
+  [
+   1793916000,
+   99946026.99407633
+  ],
+  [
+   1793919600,
+   99946026.99407633
+  ],
+  [
+   1793923200,
+   99946026.99407633
+  ],
+  [
+   1793926800,
+   99946026.99407633
+  ],
+  [
+   1793930400,
+   99946026.99407633
+  ],
+  [
+   1793934000,
+   99946026.99407633
+  ],
+  [
+   1793937600,
+   99946026.99407633
+  ],
+  [
+   1793941200,
+   99946026.99407633
+  ],
+  [
+   1793944800,
+   99946026.99407633
+  ],
+  [
+   1793948400,
+   99946026.99407633
+  ],
+  [
+   1793952000,
+   99946026.99407633
+  ],
+  [
+   1793955600,
+   99946026.99407633
+  ],
+  [
+   1793959200,
+   99946026.99407633
+  ],
+  [
+   1793962800,
+   99946026.99407633
+  ],
+  [
+   1793966400,
+   99946026.99407633
+  ],
+  [
+   1793970000,
+   99946026.99407633
+  ],
+  [
+   1793973600,
+   99946026.99407633
+  ],
+  [
+   1793977200,
+   99946026.99407633
+  ],
+  [
+   1793980800,
+   99946026.99407633
+  ],
+  [
+   1793984400,
+   99946026.99407633
+  ],
+  [
+   1793988000,
+   99946026.99407633
+  ],
+  [
+   1793991600,
+   99946026.99407633
+  ],
+  [
+   1793995200,
+   99946026.99407633
+  ],
+  [
+   1793998800,
+   99946026.99407633
+  ],
+  [
+   1794002400,
+   99946026.99407633
+  ],
+  [
+   1794006000,
+   99946026.99407633
+  ],
+  [
+   1794009600,
+   99946026.99407633
+  ],
+  [
+   1794013200,
+   99946026.99407633
+  ],
+  [
+   1794016800,
+   99946026.99407633
+  ],
+  [
+   1794020400,
+   99946026.99407633
+  ],
+  [
+   1794024000,
+   99946026.99407633
+  ],
+  [
+   1794027600,
+   99946026.99407633
+  ],
+  [
+   1794031200,
+   99946026.99407633
+  ],
+  [
+   1794034800,
+   99946026.99407633
+  ],
+  [
+   1794038400,
+   99946026.99407633
+  ],
+  [
+   1794042000,
+   99946026.99407633
+  ],
+  [
+   1794045600,
+   99946026.99407633
+  ],
+  [
+   1794049200,
+   99946026.99407633
+  ],
+  [
+   1794052800,
+   99946026.99407633
+  ],
+  [
+   1794056400,
+   99946026.99407633
+  ],
+  [
+   1794060000,
+   99946026.99407633
+  ],
+  [
+   1794063600,
+   99831873.21427771
+  ],
+  [
+   1794067200,
+   99764167.62702702
+  ],
+  [
+   1794070800,
+   99764167.62702702
+  ],
+  [
+   1794074400,
+   99764167.62702702
+  ],
+  [
+   1794078000,
+   99764167.62702702
+  ],
+  [
+   1794081600,
+   99764167.62702702
+  ],
+  [
+   1794085200,
+   99764167.62702702
+  ],
+  [
+   1794088800,
+   99764167.62702702
+  ],
+  [
+   1794092400,
+   99731943.8451283
+  ],
+  [
+   1794096000,
+   99731939.10174176
+  ],
+  [
+   1794099600,
+   99691106.44923079
+  ],
+  [
+   1794103200,
+   99633174.34819803
+  ],
+  [
+   1794106800,
+   99516703.80874524
+  ],
+  [
+   1794110400,
+   99502521.86418836
+  ],
+  [
+   1794114000,
+   99502521.86418836
+  ],
+  [
+   1794117600,
+   99502521.86418836
+  ],
+  [
+   1794121200,
+   99443595.86186942
+  ],
+  [
+   1794124800,
+   99496669.60152873
+  ],
+  [
+   1794128400,
+   99496343.83202438
+  ],
+  [
+   1794132000,
+   99488994.78600095
+  ],
+  [
+   1794135600,
+   99421657.83695841
+  ],
+  [
+   1794139200,
+   99488656.45670848
+  ],
+  [
+   1794142800,
+   99358629.05450003
+  ],
+  [
+   1794146400,
+   99360442.81824626
+  ],
+  [
+   1794150000,
+   99323308.78721483
+  ],
+  [
+   1794153600,
+   99237673.01077086
+  ],
+  [
+   1794157200,
+   99182879.79436466
+  ],
+  [
+   1794160800,
+   99155956.42257687
+  ],
+  [
+   1794164400,
+   99183772.03231359
+  ],
+  [
+   1794168000,
+   99136332.60192257
+  ],
+  [
+   1794171600,
+   98872092.34291607
+  ],
+  [
+   1794175200,
+   98897931.51301967
+  ],
+  [
+   1794178800,
+   98897931.51301967
+  ],
+  [
+   1794182400,
+   98897931.51301967
+  ],
+  [
+   1794186000,
+   98897931.51301967
+  ],
+  [
+   1794189600,
+   98897931.51301967
+  ],
+  [
+   1794193200,
+   98897931.51301967
+  ],
+  [
+   1794196800,
+   98897931.51301967
+  ],
+  [
+   1794200400,
+   98897931.51301967
+  ],
+  [
+   1794204000,
+   98897931.51301967
+  ],
+  [
+   1794207600,
+   98897931.51301967
+  ],
+  [
+   1794211200,
+   98897931.51301967
+  ],
+  [
+   1794214800,
+   98897931.51301967
+  ],
+  [
+   1794218400,
+   98897931.51301967
+  ],
+  [
+   1794222000,
+   98897931.51301967
+  ],
+  [
+   1794225600,
+   98897931.51301967
+  ],
+  [
+   1794229200,
+   98897931.51301967
+  ],
+  [
+   1794232800,
+   98897931.51301967
+  ],
+  [
+   1794236400,
+   98897931.51301967
+  ],
+  [
+   1794240000,
+   98897931.51301967
+  ],
+  [
+   1794243600,
+   98897931.51301967
+  ],
+  [
+   1794247200,
+   98897931.51301967
+  ],
+  [
+   1794250800,
+   98897931.51301967
+  ],
+  [
+   1794254400,
+   98897931.51301967
+  ],
+  [
+   1794258000,
+   98897931.51301967
+  ],
+  [
+   1794261600,
+   98897931.51301967
+  ],
+  [
+   1794265200,
+   98816470.94776732
+  ],
+  [
+   1794268800,
+   98790687.2235211
+  ],
+  [
+   1794272400,
+   98652415.92684194
+  ],
+  [
+   1794276000,
+   98644707.06118521
+  ],
+  [
+   1794279600,
+   98570750.86956537
+  ],
+  [
+   1794283200,
+   98557361.7943542
+  ],
+  [
+   1794286800,
+   98502798.26874541
+  ],
+  [
+   1794290400,
+   98556725.68396437
+  ],
+  [
+   1794294000,
+   98561983.20300636
+  ],
+  [
+   1794297600,
+   98519524.59927955
+  ],
+  [
+   1794301200,
+   98515472.63100103
+  ],
+  [
+   1794304800,
+   98555832.30574733
+  ],
+  [
+   1794308400,
+   98498520.40676495
+  ],
+  [
+   1794312000,
+   98541203.33548744
+  ],
+  [
+   1794315600,
+   98494531.97109011
+  ],
+  [
+   1794319200,
+   98440108.8978344
+  ],
+  [
+   1794322800,
+   98440108.8978344
+  ],
+  [
+   1794326400,
+   98440108.8978344
+  ],
+  [
+   1794330000,
+   98440108.8978344
+  ],
+  [
+   1794333600,
+   98440108.8978344
+  ],
+  [
+   1794337200,
+   98440108.8978344
+  ],
+  [
+   1794340800,
+   98440108.8978344
+  ],
+  [
+   1794344400,
+   98440108.8978344
+  ],
+  [
+   1794348000,
+   98440108.8978344
+  ],
+  [
+   1794351600,
+   98440108.8978344
+  ],
+  [
+   1794355200,
+   98440108.8978344
+  ],
+  [
+   1794358800,
+   98440108.8978344
+  ],
+  [
+   1794362400,
+   98440108.8978344
+  ],
+  [
+   1794366000,
+   98440108.8978344
+  ],
+  [
+   1794369600,
+   98440108.8978344
+  ],
+  [
+   1794373200,
+   98440108.8978344
+  ],
+  [
+   1794376800,
+   98339212.60288383
+  ],
+  [
+   1794380400,
+   98285893.6479216
+  ],
+  [
+   1794384000,
+   98209516.91936803
+  ],
+  [
+   1794387600,
+   98211023.10939705
+  ],
+  [
+   1794391200,
+   98226996.77566408
+  ],
+  [
+   1794394800,
+   98096700.06871161
+  ],
+  [
+   1794398400,
+   98081720.99381615
+  ],
+  [
+   1794402000,
+   98061257.2259385
+  ],
+  [
+   1794405600,
+   98040402.19579676
+  ],
+  [
+   1794409200,
+   98100602.33723491
+  ],
+  [
+   1794412800,
+   98059019.76259542
+  ],
+  [
+   1794416400,
+   98062403.09739593
+  ],
+  [
+   1794420000,
+   98059596.22905718
+  ],
+  [
+   1794423600,
+   98039482.16141602
+  ],
+  [
+   1794427200,
+   98080676.5802368
+  ],
+  [
+   1794430800,
+   97996276.96406034
+  ],
+  [
+   1794434400,
+   97833549.73704071
+  ],
+  [
+   1794438000,
+   97781967.31468637
+  ],
+  [
+   1794441600,
+   97852024.01881242
+  ],
+  [
+   1794445200,
+   97662442.650123
+  ],
+  [
+   1794448800,
+   97722672.26547107
+  ],
+  [
+   1794452400,
+   97634969.09720829
+  ],
+  [
+   1794456000,
+   97653698.41210903
+  ],
+  [
+   1794459600,
+   97646427.37284662
+  ],
+  [
+   1794463200,
+   97587048.12457363
+  ],
+  [
+   1794466800,
+   97587048.12457363
+  ],
+  [
+   1794470400,
+   97587048.12457363
+  ],
+  [
+   1794474000,
+   97587048.12457363
+  ],
+  [
+   1794477600,
+   97587048.12457363
+  ],
+  [
+   1794481200,
+   97587048.12457363
+  ],
+  [
+   1794484800,
+   97587048.12457363
+  ],
+  [
+   1794488400,
+   97587048.12457363
+  ],
+  [
+   1794492000,
+   97587048.12457363
+  ],
+  [
+   1794495600,
+   97587048.12457363
+  ],
+  [
+   1794499200,
+   97587048.12457363
+  ],
+  [
+   1794502800,
+   97587048.12457363
+  ],
+  [
+   1794506400,
+   97587048.12457363
+  ],
+  [
+   1794510000,
+   97587048.12457363
+  ],
+  [
+   1794513600,
+   97587048.12457363
+  ],
+  [
+   1794517200,
+   97587048.12457363
+  ],
+  [
+   1794520800,
+   97587048.12457363
+  ],
+  [
+   1794524400,
+   97587048.12457363
+  ],
+  [
+   1794528000,
+   97587048.12457363
+  ],
+  [
+   1794531600,
+   97587048.12457363
+  ],
+  [
+   1794535200,
+   97587048.12457363
+  ],
+  [
+   1794538800,
+   97587048.12457363
+  ],
+  [
+   1794542400,
+   97587048.12457363
+  ],
+  [
+   1794546000,
+   97587048.12457363
+  ],
+  [
+   1794549600,
+   97587048.12457363
+  ],
+  [
+   1794553200,
+   97587048.12457363
+  ],
+  [
+   1794556800,
+   97587048.12457363
+  ],
+  [
+   1794560400,
+   97587048.12457363
+  ],
+  [
+   1794564000,
+   97587048.12457363
+  ],
+  [
+   1794567600,
+   97587048.12457363
+  ],
+  [
+   1794571200,
+   97587048.12457363
+  ],
+  [
+   1794574800,
+   97587048.12457363
+  ],
+  [
+   1794578400,
+   97587048.12457363
+  ],
+  [
+   1794582000,
+   97587048.12457363
+  ],
+  [
+   1794585600,
+   97587048.12457363
+  ],
+  [
+   1794589200,
+   97587048.12457363
+  ],
+  [
+   1794592800,
+   97587048.12457363
+  ],
+  [
+   1794596400,
+   97587048.12457363
+  ],
+  [
+   1794600000,
+   97587048.12457363
+  ],
+  [
+   1794603600,
+   97587048.12457363
+  ],
+  [
+   1794607200,
+   97587048.12457363
+  ],
+  [
+   1794610800,
+   97587048.12457363
+  ],
+  [
+   1794614400,
+   97587048.12457363
+  ],
+  [
+   1794618000,
+   97587048.12457363
+  ],
+  [
+   1794621600,
+   97587048.12457363
+  ],
+  [
+   1794625200,
+   97587048.12457363
+  ],
+  [
+   1794628800,
+   97587048.12457363
+  ],
+  [
+   1794632400,
+   97587048.12457363
+  ]
+ ]
+}

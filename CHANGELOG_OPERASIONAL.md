@@ -21,3 +21,8 @@ Aturan strategi, parameter, dan universe TIDAK berubah sejak freeze date
   di `/api/data`.
 - Status: [isi setelah perbaikan: tanggal, jam, dan apa yang diubah]
 - Dampak pada aturan: tidak ada.
+
+## 14 Nov 2026
+- fetch bawaan Node mendapat HTTP 403 dari Indodax saat menarik data historis. Data ditarik lewat curl dengan skrip bantuan scripts/tarik_data_curl.mjs.
+- scripts/hitung_ulang.mjs error ERR_UNSUPPORTED_ESM_URL_SCHEME di Windows; diperbaiki dengan pathToFileURL.
+- Tidak ada perubahan aturan, parameter, atau universe.
